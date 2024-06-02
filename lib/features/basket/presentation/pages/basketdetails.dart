@@ -72,7 +72,7 @@ class BasketDetails extends StatelessWidget {
                       borderRadius: BorderRadius.circular(2.w)),
                   child: Center(
                       child: Text(
-                    "اضف الي السلة",
+                    "اكمال الطلب",
                     style: TextStyleClass.normalBoldStyle(color: Colors.white),
                   )),
                 ),
