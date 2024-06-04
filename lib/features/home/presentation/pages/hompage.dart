@@ -3,7 +3,7 @@ import 'package:sizer/sizer.dart';
 import 'package:untitled/config/text_style.dart';
 import 'package:untitled/core/constants/constants.dart';
 import 'package:untitled/core/helper_funct/navigation.dart';
-import 'package:untitled/features/Feat/presentation/pages/categories_page.dart';
+import 'package:untitled/features/categories/presentation/pages/categories_page.dart';
 import 'package:untitled/features/banner/presentation/widgets/banner_resturant_widget.dart';
 import 'package:untitled/features/home/presentation/widgets/AppBar.dart';
 import 'package:untitled/features/home/presentation/widgets/wrap_subcategories_widgets.dart';
