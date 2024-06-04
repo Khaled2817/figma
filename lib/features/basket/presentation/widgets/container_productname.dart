@@ -36,18 +36,26 @@ class ContainerProductName extends StatelessWidget {
             Column(
               children: [
                 Container(
-                  child: Icon(Icons.add,color: Color(0xff25A189)),
-                  decoration: BoxDecoration(borderRadius:BorderRadius.circular(2.w),
-                  border: Border.all(color: Colors.grey)),
+                  child: Icon(Icons.add, color: Color(0xff25A189)),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(2.w),
+                      border: Border.all(color: Colors.grey)),
                 ),
                 Padding(
-                  padding:  EdgeInsets.all(1.w),
-                  child: Text("3",style: TextStyleClass.semiStyle(),),
+                  padding: EdgeInsets.all(1.w),
+                  child: Text(
+                    "3",
+                    style: TextStyleClass.semiStyle(),
+                  ),
                 ),
                 Container(
-                    decoration: BoxDecoration(borderRadius:BorderRadius.circular(2.w),
-                  border: Border.all(color: Colors.grey)),
-                  child: Icon(Icons.remove,color: Color(0xff25A189),),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(2.w),
+                      border: Border.all(color: Colors.grey)),
+                  child: Icon(
+                    Icons.remove,
+                    color: Color(0xff25A189),
+                  ),
                 )
               ],
             ),
@@ -59,15 +67,21 @@ class ContainerProductName extends StatelessWidget {
                       "اسم المنتج",
                       style: TextStyleClass.semiHeadBoldStyle(),
                     ),
-                    SizedBox(height: 1.h,),
-                    Text("ر.س23", style: TextStyleClass.normalBoldStyle(color: Color(0xff25A189) ))
+                    SizedBox(
+                      height: 1.h,
+                    ),
+                    Text("ر.س23",
+                        style: TextStyleClass.normalBoldStyle(
+                            color: Color(0xff25A189)))
                   ],
                 ),
-                SizedBox(width: 1.w,),
+                SizedBox(
+                  width: 1.w,
+                ),
                 CircleAvatar(
                   radius: 5.h,
                   backgroundColor: Colors.white,
-                  child: Image.asset(Images.foodd),
+                  child: Image.asset(Images.tee),
                 )
               ],
             )

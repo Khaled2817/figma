@@ -29,6 +29,7 @@ dependencies:
   equatable: ^2.0.5
   get_it: ^7.7.0
   cached_network_image: ^3.3.1
+  google_maps_flutter:
 
 dev_dependencies:
   flutter_test:

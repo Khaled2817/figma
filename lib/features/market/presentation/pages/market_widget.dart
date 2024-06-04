@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 import 'package:untitled/features/market/presentation/provider/provider.dart';
-import 'package:untitled/features/market/presentation/widgets/Cards/cardwrap.dart';
 import 'package:untitled/features/market/presentation/widgets/header_market_name.dart';
 import 'package:untitled/features/market/presentation/widgets/photo/photo_widget.dart';
 import 'package:untitled/features/market/presentation/widgets/vedio/vedio_widget.dart';

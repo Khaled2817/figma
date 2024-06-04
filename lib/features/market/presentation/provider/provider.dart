@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/core/constants/images.dart';
 import 'package:untitled/core/helper_funct/navigation.dart';
+import 'package:untitled/core/models/marketimagemodel.dart';
+import 'package:untitled/core/models/vediomodel.dart';
 import 'package:untitled/features/market/data/models/markeymodel.dart';
 import 'package:untitled/features/market/presentation/pages/marketpage.dart';
 import 'package:untitled/features/market/presentation/widgets/photo/imagecard/cardwrapimage.dart';
@@ -87,4 +89,22 @@ class MarketProvider with ChangeNotifier {
     basket.clear();
     basket = listMarket;
   }
+
+List<VedioModel>vediolist=[
+VedioModel(containerimage:AssetImage("${Images.rectangle4}") , image: AssetImage("${Images.subtract}"), text: '2000'),
+VedioModel(containerimage:AssetImage("${Images.rectangle5}") , image: AssetImage("${Images.subtract}"), text: '2000'),
+VedioModel(containerimage:AssetImage("${Images.rectangle8}") , image: AssetImage("${Images.subtract}"), text: '2000'),
+VedioModel(containerimage:AssetImage("${Images.rectangle4}") , image: AssetImage("${Images.subtract}"), text: '2000'),
+VedioModel(containerimage:AssetImage("${Images.rectangle9}") , image: AssetImage("${Images.subtract}"), text: '2000'),
+VedioModel(containerimage:AssetImage("${Images.rectangle0}") , image: AssetImage("${Images.subtract}"), text: '2000'),
+VedioModel(containerimage:AssetImage("${Images.rectangle4}") , image: AssetImage("${Images.subtract}"), text: '2000'),
+VedioModel(containerimage:AssetImage("${Images.rectangle2}") , image: AssetImage("${Images.subtract}"), text: '2000'),
+VedioModel(containerimage:AssetImage("${Images.rectangle3}") , image: AssetImage("${Images.subtract}"), text: '2000')
+];
+List<MarketImageModel> marketImagelist=[
+MarketImageModel(image:AssetImage("${Images.product1}")),
+MarketImageModel(image:AssetImage("${Images.product}") ),
+MarketImageModel(image:AssetImage("${Images.product1}") ),
+MarketImageModel(image:AssetImage("${Images.product}") )
+];
 }

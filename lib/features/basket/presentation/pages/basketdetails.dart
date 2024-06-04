@@ -2,26 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:untitled/config/text_style.dart';
 import 'package:untitled/core/constants/constants.dart';
-import 'package:untitled/core/helper_funct/navigation.dart';
-import 'package:untitled/core/widget/TextFiled_widget/Textfilde_widget.dart';
-import 'package:untitled/features/basket/presentation/widgets/Textfiled.dart';
+import 'package:untitled/core/constants/images.dart';
+import 'package:untitled/core/widget/text_field.dart';
 import 'package:untitled/features/basket/presentation/widgets/buycontainer.dart';
 import 'package:untitled/features/basket/presentation/widgets/container_productname.dart';
-
+import 'package:untitled/features/basket/presentation/widgets/dialog.dart';
 import '../widgets/wraprow.dart';
 
 class BasketDetails extends StatelessWidget {
-  const BasketDetails({super.key});
-
+var controller=TextEditingController(); 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
           "تفاصيل الطلب",
           style: TextStyleClass.semiBigBoldStyle(),
         ),
-        centerTitle: true,
+        centerTitle: true,backgroundColor: Colors.white,
       ),
       body: Container(
         height: 100.h,
@@ -44,15 +43,18 @@ class BasketDetails extends StatelessWidget {
               SizedBox(
                 height: 1.h,
               ),
-              DetailsTextformFild(),
+TextFieldWidget(controller:controller,hintText: "تم اختيار الموقع عبر الخريطة مسبقا",textAlign:TextAlign.right,
+prefix:Image.asset("${Images.pinaltfill}"),),
+
+            //  DetailsTextformFild(),
               WrapRow(),
               SizedBox(
-                height: 1.h,
+                height: 2.h,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text("طريقة الدفع", style: TextStyleClass.semiBoldStyle()),
+                  Text("طريقة الدفع", style: TextStyleClass.semiHeadStyle()),
                 ],
               ),
               SizedBox(
@@ -63,7 +65,7 @@ class BasketDetails extends StatelessWidget {
                 height: 5.h,
               ),
               InkWell(
-                onTap: () => navP(BasketDetails()),
+                onTap: () => showDialogExample(),
                 child: Container(
                   height: 6.h,
                   width: 80.w,

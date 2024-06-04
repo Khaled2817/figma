@@ -47,8 +47,9 @@ class BuyContainer extends StatelessWidget {
                   children: [
                     Text(
                       "بطاقة المستر كارد",
-                      style: TextStyleClass.normalBoldStyle(),
+                      style: TextStyleClass.semiStyle(),
                     ),
+                    SizedBox(width: 2.w,),
                     Image.asset("${Images.masterCard}")
                   ],
                 ))
@@ -68,8 +69,9 @@ class BuyContainer extends StatelessWidget {
                   children: [
                     Text(
                       "Apple Pay",
-                      style: TextStyleClass.normalBoldStyle(),
+                      style: TextStyleClass.semiStyle(),
                     ),
+                        SizedBox(width: 2.w,),
                     Image.asset("${Images.applePay}")
                   ],
                 ))

@@ -25,80 +25,69 @@ CardS(
     navP(MarketPage(marketName:marketModel.marketName,marketlocation: marketModel.place,));
     
       },
-      child: Container(
-        width: 46.w,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
-            boxShadow: const [
-              BoxShadow(
-                color: Color.fromARGB(255, 78, 75, 75),
-                offset: Offset(
-                  0.0,
-                  5.0,
+      child: Material(
+        elevation: 3,
+         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(2.w)),
+        child: Container(
+          width: 46.w,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(2.w),
+             ),
+          child: Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
+            children: 
+            
+            [
+              Container(
+                  width: 100.w,
+                  height: 13.h,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(2.w),
+                      image: DecorationImage(
+                          image: AssetImage(
+                            "${marketModel.image}",
+                          ),
+                          fit: BoxFit.cover))),
+             Padding(
+                padding:  EdgeInsets.all(1.w),
+                child: Text(
+                  "(${marketModel.marketName})",
+                  style: TextStyleClass.semiStyle(),
+                  maxLines: 1,
+                  overflow:TextOverflow.ellipsis ,
                 ),
-                blurRadius: 5.0,
-              ), //BoxShadow
-              BoxShadow(
-                color: Colors.white,
-                offset: Offset(0.0, 0.0),
-                blurRadius: 0.0,
-                spreadRadius: 0.0,
-              ), //BoxShadow
-            ]),
-        child: Column(
-        crossAxisAlignment: CrossAxisAlignment.end,
-          children: 
-          
-          [
-            Container(
-                width: 100.w,
-                height: 13.h,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    image: DecorationImage(
-                        image: AssetImage(
-                          "${marketModel.image}",
-                        ),
-                        fit: BoxFit.cover))),
-     Padding(
-              padding:  EdgeInsets.all(1.w),
-              child: Text(
-                "(${marketModel.marketName})",
-                style: TextStyleClass.semiStyle(),
-                maxLines: 1,
-                overflow:TextOverflow.ellipsis ,
               ),
-            ),
-            Padding(
-              padding:  EdgeInsets.all(1.w),
-              child: Text(
-                "${marketModel.headtext}",
-                style: TextStyleClass.semiStyle(),
-                maxLines: 1,
-                overflow:TextOverflow.ellipsis ,
+              Padding(
+                padding:  EdgeInsets.all(1.w),
+                child: Text(
+                  "${marketModel.headtext}",
+                  style: TextStyleClass.semiStyle(),
+                  maxLines: 1,
+                  overflow:TextOverflow.ellipsis ,
+                ),
               ),
-            ),
-            Padding(
-              padding:  EdgeInsets.all(2.w),
-              child: Text(
-                "${marketModel.dectext}",
-                style: TextStyleClass.smallStyle(),
-                   maxLines: 2,
-                overflow:TextOverflow.ellipsis ,
+              Padding(
+                padding:  EdgeInsets.all(2.w),
+                child: Text(
+                  "${marketModel.dectext}",
+                  style: TextStyleClass.smallStyle(),
+                     maxLines: 2,
+                  overflow:TextOverflow.ellipsis ,
+                ),
               ),
-            ),
-            Padding(
-              padding:  EdgeInsets.all(2.w),
-              child: Text(
-              "${marketModel.place}",
-                style: TextStyleClass.smallStyle(color: 
-                Color.fromARGB(255, 16, 201, 111)),
-                   maxLines: 2,
-                overflow:TextOverflow.ellipsis ,
-                
-              ),
-            )
-          ],
+              Padding(
+                padding:  EdgeInsets.all(2.w),
+                child: Text(
+                "${marketModel.place}",
+                  style: TextStyleClass.smallStyle(color: 
+                  Color.fromARGB(255, 16, 201, 111)),
+                     maxLines: 2,
+                  overflow:TextOverflow.ellipsis ,
+                  
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

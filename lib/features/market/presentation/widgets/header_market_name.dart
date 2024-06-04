@@ -33,7 +33,7 @@ class HeaderMarketName extends StatelessWidget {
             ),
             Text(
              "${marketlocation}",
-              style: TextStyleClass.normalBoldStyle(),
+              style: TextStyleClass.semiBoldStyle(color: Color(0xff25A189)),
             ),
             SizedBox(
               height: 1.h,

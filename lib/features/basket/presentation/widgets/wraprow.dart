@@ -1,13 +1,16 @@
-
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
-import 'package:untitled/features/basket/presentation/widgets/rowWrap.dart';
+import 'package:untitled/config/app_color.dart';
+import 'package:untitled/config/text_style.dart';
+import 'package:untitled/features/basket/presentation/provider/basketprovider.dart';
 
 class WrapRow extends StatelessWidget {
   const WrapRow({super.key});
 
   @override
   Widget build(BuildContext context) {
+    var myProvider = Provider.of<BasketProvider>(context);
     return SizedBox(
       width: 100.w,
       child: Wrap(
@@ -15,11 +18,21 @@ class WrapRow extends StatelessWidget {
         alignment: WrapAlignment.spaceBetween,
         children: <Widget>[
           ...List.generate(
-             3,
-              (index) =>Padding(
-                padding:  EdgeInsets.only(top: 2.h),
-                child: Rowwrap(),
-              ))
+              myProvider.finalPriceList.length,
+              (index) => Padding(
+                    padding: EdgeInsets.only(top: 1.h),
+                    child: Row(
+                      children: <Widget>[
+                        Text(
+                          "${myProvider.finalPriceList[index].price}",
+                          style: TextStyleClass.semiStyle(color:Color(0xff868889)),
+                        ),
+                        Spacer(),
+                        Text("${myProvider.finalPriceList[index].title}",
+                            style: TextStyleClass.semiStyle(color:Color(0xff868889)))
+                      ],
+                    ),
+                  ))
         ],
       ),
     );
