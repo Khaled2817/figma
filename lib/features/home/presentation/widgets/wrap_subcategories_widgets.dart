@@ -29,7 +29,7 @@ class WrapSubCategoriesWidgets extends StatelessWidget {
         child:  Column(
           children: <Widget>[
             Image(image:myProvider.categoriesCard[index].image),
-            Text("${myProvider.categoriesCard[index].catigorName}",
+            Text(myProvider.categoriesCard[index].catigorName,
             style:TextStyleClass.smallBoldStyle(color: const Color.fromARGB(255, 0, 0, 0)))
           ],
         ),

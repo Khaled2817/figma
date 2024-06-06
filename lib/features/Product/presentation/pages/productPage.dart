@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:sizer/sizer.dart';
-import 'package:untitled/config/app_color.dart';
 import 'package:untitled/config/text_style.dart';
 import 'package:untitled/core/constants/constants.dart';
 import 'package:untitled/core/constants/images.dart';
@@ -9,27 +7,35 @@ import 'package:untitled/features/Product/presentation/widgets/floatingButtom.da
 import 'package:untitled/features/Product/presentation/widgets/product_discount_details.dart';
 import 'package:untitled/features/Product/presentation/widgets/projectbanner.dart';
 
-
 class ProductPage extends StatelessWidget {
   const ProductPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton:FloatingButtom() ,
+      floatingActionButton: const FloatingButtom(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       appBar: AppBar(
+          leading: Icon(Icons.arrow_back_ios),
+          elevation: 0,
           title: Text(
             "اسم المنتج",
             style: TextStyleClass.headBoldStyle(),
           ),
           centerTitle: true,
           actions: [
-            Image.asset("${Images.eye}"),
             Padding(
               padding: EdgeInsets.all(2.w),
-              child: Text("22k"),
-            )
+              child: Row(
+                children: [
+                  Text("22k"),
+                  SizedBox(
+                    width: 2.w,
+                  ),
+                  Image.asset(Images.eye),
+                ],
+              ),
+            ),
           ]),
       body: Container(
         width: 100.w,
@@ -37,38 +43,27 @@ class ProductPage extends StatelessWidget {
         padding: appPadding,
         child: SingleChildScrollView(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              ProductBanner(),
-              Directionality(textDirection:TextDirection .rtl ,
-              child: ProductDiscountDetails()),
+              const ProductBanner(),
               SizedBox(
                 height: 2.h,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text("   وصف عن المنتج وصف عن المنتج",
-                      style: TextStyleClass.normalStyle(color: Colors.grey)),
-                ],
+              const Directionality(
+                  textDirection: TextDirection.rtl,
+                  child: ProductDiscountDetails()),
+              SizedBox(
+                height: 2.h,
+              ),
+              Text(
+                "وصف عن المنتج " * 20,
+                style: TextStyleClass.semiStyle(color: Colors.grey),
+                maxLines: 10,
+                overflow: TextOverflow.ellipsis,
               ),
               SizedBox(
                 height: 20.h,
               ),
-              // InkWell(
-              //   onTap: () => navP(BasketDetails()),
-              //   child: Container(
-              //     height: 6.h,
-              //     width: 80.w,
-              //     decoration: BoxDecoration(
-              //         color: Color(0xff264653),
-              //         borderRadius: BorderRadius.circular(2.w)),
-              //     child: Center(
-              //         child: Text(
-              //       "اضف الي السلة",
-              //       style: TextStyleClass.normalBoldStyle(color: Colors.white),
-              //     )),
-              //   ),
-              // )
             ],
           ),
         ),

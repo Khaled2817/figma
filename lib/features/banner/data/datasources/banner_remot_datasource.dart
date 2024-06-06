@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
-import 'package:untitled/core/helper_funct/api.dart';
+import 'package:untitled/core/helper_function/api.dart';
 import 'package:untitled/features/banner/data/models/bannermodel.dart';
 
 class BannerRemotDataSource {

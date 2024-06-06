@@ -12,12 +12,12 @@ class CircleAvatarProf extends StatelessWidget {
                 shape:RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(7.w)) ,
                  child: Container(
-                  decoration: BoxDecoration(border: Border.all(color: Color(0xffE97053),),
+                  decoration: BoxDecoration(border: Border.all(color: const Color(0xffE97053),),
                   borderRadius: BorderRadius.circular(7.w)
                   ),
                    child: CircleAvatar(
                      radius: 7.w,
-                     backgroundImage: AssetImage("${Images.prof}"),
+                     backgroundImage: const AssetImage(Images.prof),
                    ),
                  ),
                );

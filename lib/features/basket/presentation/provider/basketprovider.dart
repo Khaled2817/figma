@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/core/helper_funct/navigation.dart';
+import 'package:untitled/core/helper_function/navigation.dart';
 import 'package:untitled/core/models/finalpricemodel.dart';
 import 'package:untitled/features/basket/presentation/pages/basketdetails.dart';
 class BasketProvider extends ChangeNotifier{

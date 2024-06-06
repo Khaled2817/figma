@@ -17,17 +17,15 @@ class ContainerProfileAccount extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Column(
-            children: [
-              InkWell(child: Image.asset("${Images.exitAll}")),
-              SizedBox(height: 2.h,),
-              InkWell(child: Image.asset("${Images.update}")),
-            ],
-          ),
+       
           Row(
             children: [
+              const CircleAvatarProf(),
+            SizedBox(
+                width: 3.w,
+              ),
               Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment:MainAxisAlignment.start,
                 children: [
                   Text(
@@ -39,11 +37,11 @@ class ContainerProfileAccount extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Text("معتمد",
-                          style: TextStyleClass.normalBoldStyle(
-                              color: Color(0xff25A189))),
+                      Image.asset(Images.protect),
                               SizedBox(width: 2.w,),
-                              Image.asset("${Images.protect}")
+                              Text("معتمد",
+                          style: TextStyleClass.normalBoldStyle(
+                              color: const Color(0xff25A189))),
                    ],
                   )
                 ],
@@ -51,13 +49,17 @@ class ContainerProfileAccount extends StatelessWidget {
               SizedBox(
                 width: 2.w,
               ),
-            CircleAvatarProf(),
-            SizedBox(
-                width: 3.w,
-              )
+            
             ],
           
-          )
+          ),
+             Column(
+            children: [
+              InkWell(child: Image.asset(Images.exitAll)),
+              SizedBox(height: 2.h,),
+              InkWell(child: Image.asset(Images.update)),
+            ],
+          ),
         ],
       ),
     );

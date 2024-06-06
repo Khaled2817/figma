@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:sizer/sizer.dart';
 import 'package:untitled/config/app_color.dart';
 import 'package:untitled/config/text_style.dart';
-import 'package:untitled/core/constants/constants.dart';
 import 'package:untitled/core/constants/images.dart';
 
 class OrderContainer extends StatelessWidget {
@@ -25,15 +23,7 @@ class OrderContainer extends StatelessWidget {
           padding:  EdgeInsets.all(3.w),
           child: Row(
             children: [
-                Container(height: 6.h,
-                 width: 35.w,
-               decoration: BoxDecoration(  color:AppColor.secColor,
-               borderRadius: BorderRadius.circular(2.w)
-               ),
-                 child: Center(child: Text("تتبع الطلب",style:TextStyleClass.semiStyle(color: Colors.white),)),
-                 ),
-                 Spacer(),
-              Row(
+               Row(
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
@@ -47,7 +37,7 @@ class OrderContainer extends StatelessWidget {
                       ),
                       Text("22.12 ر.س ",
                           style: TextStyleClass.normalBoldStyle(
-                              color: Color(0xff25A189)))
+                              color: const Color(0xff25A189)))
                     ],
                   ),
                   SizedBox(
@@ -59,7 +49,16 @@ class OrderContainer extends StatelessWidget {
                     child: Image.asset(Images.tee),
                   )
                 ],
-              )
+              ),
+                 const Spacer(),
+                   Container(height: 6.h,
+                 width: 35.w,
+               decoration: BoxDecoration(  color:AppColor.secColor,
+               borderRadius: BorderRadius.circular(2.w)
+               ),
+                 child: Center(child: Text("تتبع الطلب",style:TextStyleClass.semiStyle(color: Colors.white),)),
+                 )
+             
             ],
           ),
         ),

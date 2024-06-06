@@ -9,13 +9,13 @@ class MarketPage extends StatelessWidget {
   
 String? marketName;
 String? marketlocation;
-MarketPage({this.marketName,this.marketlocation});
+MarketPage({super.key, this.marketName,this.marketlocation});
   @override
   Widget build(BuildContext context) {
         var myProvider = Provider.of<MarketProvider>(context);
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Container(
+      body: SizedBox(
         height: 100.h,
         width: 100.w,
         child: SingleChildScrollView(
@@ -28,8 +28,8 @@ MarketPage({this.marketName,this.marketlocation});
               SizedBox(
                 height: 2.h,
               ),
-              Row(
-                children: <Widget>[VedioWidget(), PhotoWidget()],
+              const Row(
+                children: <Widget>[PhotoWidget(),VedioWidget()],
               ),
               SizedBox(
                 height: 5.h,

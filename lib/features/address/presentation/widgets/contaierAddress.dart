@@ -22,11 +22,15 @@ class AddressesContaire extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Row(
-              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
+                     SizedBox(
+                  width: 16.w,
+                ),
                 Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                
                     Text(
                       "المنزل",
                       style: TextStyleClass.semiBoldStyle(),
@@ -35,52 +39,52 @@ class AddressesContaire extends StatelessWidget {
                       height: 1.h,
                     ),
                     Text("٣٢٣٢٣٢", style: TextStyleClass.semiBoldStyle()),
+                    
                   ],
                 ),
-                SizedBox(
-                  width: 16.w,
-                )
+               
               ],
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Text("RHMA8243,8243,3934 pd",
-                    style: TextStyleClass.semiStyle()),
-                SizedBox(
-                  width: 10.w,
-                ),
-                Container(
+                  Container(
                   height: 3.h,
                   width: 6.w,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(2.w),
-                      color: Color(0xff264653),
-                      image: DecorationImage(
-                          image: AssetImage("${Images.done}"),
+                      color: const Color(0xff264653),
+                      image: const DecorationImage(
+                          image: AssetImage(Images.done),
                           fit: BoxFit.cover)),
-                )
+                ) , 
+                SizedBox(
+                  width: 10.w,
+                ),
+            Text("RHMA8243,8243,3934 pd",
+                    style: TextStyleClass.semiStyle()),
               ],
             ),
             SizedBox(
               height: 2.h,
             ),
+
             Padding(
               padding: EdgeInsets.all(2.w),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  InkWell(
-                    child: Image.asset("${Images.remove}"),
+                InkWell(child: Image.asset(Images.update1)),
+                  SizedBox(
+                    width: 7.w,
+                  ),
+                    InkWell(
+                    child: Image.asset(Images.remove),
                     onTap: () {
                       Provider.of<AddressesProvider>(context, listen: false)
                           .removeAddress();
                     },
                   ),
-                  SizedBox(
-                    width: 7.w,
-                  ),
-                  InkWell(child: Image.asset("${Images.update1}"))
                 ],
               ),
             )

@@ -8,9 +8,9 @@ class ProductProvider with ChangeNotifier {
     notifyListeners();
   }
 List<MarketImageModel> marketImagelist=[
-MarketImageModel(image:AssetImage("${Images.food2}")),
-MarketImageModel(image:AssetImage("${Images.food2}") ),
-MarketImageModel(image:AssetImage("${Images.food2}") ),
-MarketImageModel(image:AssetImage("${Images.food2}") )
+MarketImageModel(image:const AssetImage(Images.image1)),
+MarketImageModel(image:const AssetImage(Images.image1) ),
+MarketImageModel(image:const AssetImage(Images.image1) ),
+MarketImageModel(image:const AssetImage(Images.image1) )
 ];
 }

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
-import 'package:untitled/features/market/data/models/markeymodel.dart';
 import 'package:untitled/features/market/presentation/provider/provider.dart';
 import 'package:untitled/features/market/presentation/widgets/Cards/Cards.dart';
 

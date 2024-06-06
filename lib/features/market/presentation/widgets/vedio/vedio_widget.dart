@@ -4,7 +4,6 @@ import 'package:sizer/sizer.dart';
 import 'package:untitled/config/app_color.dart';
 import 'package:untitled/config/text_style.dart';
 import 'package:untitled/core/constants/images.dart';
-import 'package:untitled/core/widget/Svg_Icon/svg_widget.dart';
 import 'package:untitled/features/market/presentation/provider/provider.dart';
 
 class VedioWidget extends StatelessWidget {
@@ -26,7 +25,7 @@ class VedioWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[Text("الفيديوهات",style: TextStyleClass.normalBoldStyle(color:
            vedioprovider.image?Colors.black:Colors.white),),SizedBox(width: 2.w,),
-             Image.asset("${Images.subtract}",color: vedioprovider.image?AppColor.secColor:Colors.white ,),
+             Image.asset(Images.subtract,color: vedioprovider.image?AppColor.secColor:Colors.white ,),
         ],),),
     );
   }

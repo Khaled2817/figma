@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 
 class MarketModel {
   String image;
@@ -6,10 +5,13 @@ class MarketModel {
   String dectext;
   String place;
   String marketName;
+  String price;
   MarketModel(
       {required this.dectext,
       required this.headtext,
       required this.image,
       required this.place,
-      required this.marketName});
+      required this.marketName,
+      required this.price,
+      });
 }

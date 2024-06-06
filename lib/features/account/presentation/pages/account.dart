@@ -28,15 +28,15 @@ class AccountPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                ContainerProfileAccount(),
+                const ContainerProfileAccount(),
                 SizedBox(
                   height: 2.h,
                 ),
-                ContainerMoney(),
+                const ContainerMoney(),
                 SizedBox(
-                  height: 1.h,
+                  height: 2.h,
                 ),
-                WrapOfAccount()
+                const WrapOfAccount()
               ],
             ),
           )),

@@ -11,9 +11,11 @@ class AddressesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton:FloatingButtomAddress() ,
+      floatingActionButton:const FloatingButtomAddress() ,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       appBar: AppBar(
+        elevation: 0,
+        leading: Icon(Icons.arrow_back_ios),
         title: Text(
           "عناويني",
           style: TextStyleClass.headBoldStyle(),
@@ -28,7 +30,7 @@ class AddressesPage extends StatelessWidget {
             child: Column(
           children: [
             SizedBox(height: 3.h,),
-WrapAddress(),
+const WrapAddress(),
 SizedBox(height: 16.h,),
 //ButtonWidget(onTap: (){Provider.of<AddressesProvider>(context,listen: false).addAddress();}, text:"اضف عنوان جديد",textStyle: TextStyleClass.semiBigBoldStyle(color: Colors.white),)
 

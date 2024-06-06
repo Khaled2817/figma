@@ -12,15 +12,16 @@ class OrdersPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-      
+      elevation: 0,
+      leading: Icon(Icons.arrow_back_ios),
         title:Text("طلباتي",style:TextStyleClass.semiHeadBoldStyle(),),centerTitle: true,),
       body: Container(
         width: 100.w,
         height: 100.w,
         padding: appPadding,
-        child: SingleChildScrollView(child: Column(children: <Widget>[OrderContainer(),
+        child: SingleChildScrollView(child: Column(children: <Widget>[const OrderContainer(),
         SizedBox(height: 2.h,),
-        StatusContainer()
+        const StatusContainer()
         ],)),
       ),
     );

@@ -2,38 +2,41 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:untitled/config/text_style.dart';
 import 'package:untitled/core/constants/images.dart';
-import 'package:untitled/core/widget/Svg_Icon/svg_widget.dart';
+import 'package:untitled/core/widget/svg_widget.dart';
 
 class HeaderMarketName extends StatelessWidget {
   String? marketname;
   String? marketlocation;
-  HeaderMarketName(this.marketlocation,this.marketname);
+  HeaderMarketName(this.marketlocation,this.marketname, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment:MainAxisAlignment.center,
       children: <Widget>[
-        SizedBox(
-          width: 8.w,
+           Column(
+          children: <Widget>[
+             SizedBox(
+          width: 30.w,
         ),
-        Image(image: AssetImage("${Images.Message_fill}")),
-        SizedBox(
-          width: 3.w,
+            const SvgWidget(svg: Images.Group),
+            Text(
+              "موثق",
+              style: TextStyleClass.normalBoldStyle(),
+            ),
+          ],
         ),
-        Image(image: AssetImage("${Images.Phone_fill}")),
-        SizedBox(
-          width: 17.w,
-        ),
+      
         Column(
           children: <Widget>[
-            Image(image: AssetImage("${Images.Rectangle}")),
+            const Image(image: AssetImage(Images.Rectangle)),
             SizedBox(
               height: 2.h,
             ),
             Text(
-             "${marketlocation}",
-              style: TextStyleClass.semiBoldStyle(color: Color(0xff25A189)),
+             "$marketlocation",
+              style: TextStyleClass.semiBoldStyle(color: const Color(0xff25A189)),
             ),
             SizedBox(
               height: 1.h,
@@ -41,26 +44,23 @@ class HeaderMarketName extends StatelessWidget {
             Row(
               children: [
                 Text(
-                 "${marketname}",
+                 "$marketname",
                   style: TextStyleClass.normalBoldStyle(),
                 ),
-                Image(image: AssetImage("${Images.Pinalt}"))
+                const Image(image: AssetImage(Images.Pinalt))
               ],
             )
           ],
         ),
-        SizedBox(
+         SizedBox(
           width: 15.w,
         ),
-        Column(
-          children: <Widget>[
-            SvgWidget(svg: Images.Group),
-            Text(
-              "موثق",
-              style: TextStyleClass.normalBoldStyle(),
-            ),
-          ],
-        )
+        const Image(image: AssetImage(Images.Phone_fill)),
+     
+        SizedBox(
+          width: 3.w,
+        ),
+        const Image(image: AssetImage(Images.Message_fill)),
       ],
     );
   }

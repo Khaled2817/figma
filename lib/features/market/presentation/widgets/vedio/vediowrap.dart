@@ -29,6 +29,13 @@ class CardWrapVedio extends StatelessWidget {
                     child: Container(
                         width: 30.w,
                         height: 20.h,
+                        // padding: appPadding,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(2.w),
+                          image: DecorationImage(
+                              image: myProvider.vediolist[index].containerimage,
+                              fit: BoxFit.cover),
+                        ),
                         child: Container(
                           margin: EdgeInsets.only(bottom: 2.w),
                           alignment: Alignment.bottomLeft,
@@ -49,13 +56,6 @@ class CardWrapVedio extends StatelessWidget {
                               )
                             ],
                           ),
-                        ),
-                        // padding: appPadding,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(2.w),
-                          image: DecorationImage(
-                              image: myProvider.vediolist[index].containerimage,
-                              fit: BoxFit.cover),
                         )),
                   )))
         ],

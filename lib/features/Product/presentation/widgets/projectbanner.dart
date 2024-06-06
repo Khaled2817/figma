@@ -12,6 +12,7 @@ class ProductBanner extends StatelessWidget {
   Widget build(BuildContext context) {
        var myProvider = Provider.of<ProductProvider>(context);
     return Material(
+      color: Colors.white,
       shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(2.w)) ,
       child: Container(
@@ -65,15 +66,19 @@ class ProductBanner extends StatelessWidget {
                                         height: 5.h,
                                         width: 20.w,
                                         color: Colors.black,
-                                        child: Row(
-                                          children: [
-                                            Text(
-                                              " 22 k ",
-                                              style: TextStyleClass.semiBoldStyle(
-                                                  color: Colors.white),
-                                            ),
-                                            Image.asset("${Images.shar}")
-                                          ],
+                                        child: Padding(
+                                          padding:  EdgeInsets.all(2.w),
+                                          child: Row(
+                                            children: [
+                                             
+                                              Image.asset(Images.shar),
+                                               Text(
+                                                "  22k",
+                                                style: TextStyleClass.semiBoldStyle(
+                                                    color: Colors.white),
+                                              ),
+                                            ],
+                                          ),
                                         ),
                                       ),
                                     ),

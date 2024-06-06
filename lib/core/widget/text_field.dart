@@ -3,6 +3,7 @@ import 'package:sizer/sizer.dart';
 
 import '../../config/app_color.dart';
 import '../../config/text_style.dart';
+import '../../features/language/presentation/provider/language_provider.dart';
 import '../constants/constants.dart';
 
 class TextFieldWidget extends StatelessWidget {
@@ -70,12 +71,12 @@ class TextFieldWidget extends StatelessWidget {
                   maxLength: maxLength,
                   style: style??TextStyleClass.semiStyle(),
               
-                  // validator: validator??(value){
-                  //   if (value!.isEmpty) {
-                  //     return LanguageProvider.translate('validation', 'field',);
-                  //   }
-                  //   return null;
-                  // },
+                  validator: validator??(value){
+                    if (value!.isEmpty) {
+                      return LanguageProvider.translate('validation', 'field',);
+                    }
+                    return null;
+                  },
                   onEditingComplete: onEditingComplete??(){
                     FocusScope.of(context).unfocus();
                     if(next){
@@ -97,11 +98,9 @@ class TextFieldWidget extends StatelessWidget {
       counterText: counter,
       isDense: true,
       counterStyle: TextStyleClass.normalStyle(),
-      // labelText: labelText==null?null:LanguageProvider.translate('inputs', labelText!,),
-      // hintText: hintText==null?null:LanguageProvider.translate('hints', hintText!,),
+      labelText: labelText==null?null:LanguageProvider.translate('inputs', labelText!,),
+      hintText: hintText==null?null:LanguageProvider.translate('hints', hintText!,),
       hintStyle: hintStyle??TextStyleClass.normalStyle(color: Colors.grey),
-      labelText: labelText ,
-      hintText: hintText ,
       fillColor: color??Colors.white,
       filled: true,
       labelStyle: TextStyleClass.normalStyle(color: const Color(0xff8F8C8C)),
@@ -156,8 +155,7 @@ class TitleTextFieldWidget extends StatelessWidget {
   final String titleText;
   @override
   Widget build(BuildContext context) {
-    return 
-    Text( titleText,
+    return Text(LanguageProvider.translate('inputs', titleText),
       style: TextStyleClass.semiStyle(),);
   }
 }

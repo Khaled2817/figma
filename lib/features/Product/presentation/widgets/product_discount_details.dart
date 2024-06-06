@@ -4,6 +4,8 @@ import 'package:untitled/config/text_style.dart';
 import 'package:untitled/core/constants/constants.dart';
 
 class ProductDiscountDetails extends StatelessWidget {
+  const ProductDiscountDetails({super.key});
+
 
   @override
   Widget build(BuildContext context) {

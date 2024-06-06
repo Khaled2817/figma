@@ -92,11 +92,11 @@ class TextStyleClass {
     );
   }
 
-  static TextStyle normalStyle({Color? color,double? fontSize}) {
+  static TextStyle normalStyle({Color? color,double? fontSize,double?height}) {
     return GoogleFonts.cairo(
       color: color ?? Colors.black,
       fontSize: fontSize ?? 10.sp,
-      height: 1.3,
+      height: height??1.3,
       fontWeight: FontWeight.w400,
     );
   }
@@ -111,10 +111,10 @@ class TextStyleClass {
     );
   }
 
-  static TextStyle normalBoldStyle({Color? color}) {
+  static TextStyle normalBoldStyle({Color? color,double? fontSize}) {
     return GoogleFonts.cairo(
       color: color ?? Colors.black,
-      fontSize: 11.sp,
+      fontSize:fontSize ?? 11.sp,
       height: 1.3,
       fontWeight: FontWeight.bold,
     );

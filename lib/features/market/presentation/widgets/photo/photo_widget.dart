@@ -4,6 +4,8 @@ import 'package:sizer/sizer.dart';
 import 'package:untitled/config/app_color.dart';
 import 'package:untitled/config/text_style.dart';
 import 'package:untitled/core/constants/images.dart';
+import 'package:untitled/core/helper_function/navigation.dart';
+import 'package:untitled/features/Product/presentation/pages/productPage.dart';
 import 'package:untitled/features/market/presentation/provider/provider.dart';
 
 class PhotoWidget extends StatelessWidget {
@@ -14,6 +16,7 @@ class PhotoWidget extends StatelessWidget {
      var photoprovider = Provider.of<MarketProvider>(context);
     return InkWell(
       onTap: (){
+       
         photoprovider.taggel();
       },
       child: Container(
@@ -28,7 +31,7 @@ class PhotoWidget extends StatelessWidget {
               style: TextStyleClass.normalBoldStyle(color:photoprovider.image?Colors.white:Colors.black),
             ),
             SizedBox(width: 2.w,),
-            Image(image: AssetImage("${Images.Imgbox}"),color: photoprovider.image?Colors.white:AppColor.secColor,)
+            Image(image: const AssetImage(Images.Imgbox),color: photoprovider.image?Colors.white:AppColor.secColor,)
           ],
         ),
       ),

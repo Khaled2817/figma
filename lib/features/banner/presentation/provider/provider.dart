@@ -19,7 +19,7 @@ data['lng']=0;
 data['page']=1;
 print("this my data map for addBanner $data");
 Either<DioException, List<BannerEntity>>response=await BannerUseCase(sl()).getnearbanners(data);
-response.fold((l){print(l.toString());}, (r){
+response.fold((l){print("خطاء"+l.toString());}, (r){
 bannersList=r;
 notifyListeners();
 });

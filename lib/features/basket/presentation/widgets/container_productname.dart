@@ -8,84 +8,75 @@ class ContainerProductName extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 100.w,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(2.w),
-          boxShadow: const [
-            BoxShadow(
-              color: Color.fromARGB(255, 221, 221, 221),
-              offset: Offset(
-                0.0,
-                5.0,
+    return Material(
+      elevation: 1.w,
+      color: Colors.white,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(2.w)),
+      child: Container(
+        width: 100.w,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(2.w),
+          ),
+        child: Padding(
+          padding: EdgeInsets.all(5.w),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              
+              Row(
+                children: [
+                  CircleAvatar(
+                    radius: 5.h,
+                    backgroundColor: Colors.white,
+                    child: Image.asset(Images.tee),
+                  ),
+                  SizedBox(
+                    width: 1.w,
+                  ),
+                  Column(
+                    children: [
+                      Text(
+                        "اسم المنتج",
+                        style: TextStyleClass.semiHeadBoldStyle(),
+                      ),
+                      SizedBox(
+                        height: 1.h,
+                      ),
+                      Text("ر.س23",
+                          style: TextStyleClass.normalBoldStyle(
+                              color: const Color(0xff25A189)))
+                    ],
+                  ),
+                ],
               ),
-              blurRadius: 5.0,
-            ), //BoxShadow
-            BoxShadow(
-              color: Colors.white,
-              offset: Offset(0.0, 0.0),
-              blurRadius: 0.0,
-              spreadRadius: 0.0,
-            ), //BoxShadow
-          ]),
-      child: Padding(
-        padding: EdgeInsets.all(5.w),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Column(
-              children: [
-                Container(
-                  child: Icon(Icons.add, color: Color(0xff25A189)),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(2.w),
-                      border: Border.all(color: Colors.grey)),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(1.w),
-                  child: Text(
-                    "3",
-                    style: TextStyleClass.semiStyle(),
+              Column(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(2.w),
+                        border: Border.all(color: Colors.grey)),
+                    child: const Icon(Icons.add, color: Color(0xff25A189)),
                   ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(2.w),
-                      border: Border.all(color: Colors.grey)),
-                  child: Icon(
-                    Icons.remove,
-                    color: Color(0xff25A189),
+                  Padding(
+                    padding: EdgeInsets.all(1.w),
+                    child: Text(
+                      "3",
+                      style: TextStyleClass.semiStyle(),
+                    ),
                   ),
-                )
-              ],
-            ),
-            Row(
-              children: [
-                Column(
-                  children: [
-                    Text(
-                      "اسم المنتج",
-                      style: TextStyleClass.semiHeadBoldStyle(),
+                  Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(2.w),
+                        border: Border.all(color: Colors.grey)),
+                    child: const Icon(
+                      Icons.remove,
+                      color: Color(0xff25A189),
                     ),
-                    SizedBox(
-                      height: 1.h,
-                    ),
-                    Text("ر.س23",
-                        style: TextStyleClass.normalBoldStyle(
-                            color: Color(0xff25A189)))
-                  ],
-                ),
-                SizedBox(
-                  width: 1.w,
-                ),
-                CircleAvatar(
-                  radius: 5.h,
-                  backgroundColor: Colors.white,
-                  child: Image.asset(Images.tee),
-                )
-              ],
-            )
-          ],
+                  )
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

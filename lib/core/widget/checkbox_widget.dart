@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
 import 'package:untitled/config/app_color.dart';
+import 'package:sizer/sizer.dart';
 class CheckBoxWidget extends StatelessWidget {
   const CheckBoxWidget({super.key, required this.check, required this.onChange, this.padding});
   final bool check;
@@ -16,7 +16,7 @@ class CheckBoxWidget extends StatelessWidget {
         decoration: BoxDecoration(
           border: check?null:Border.all(color: Colors.grey,width: 1.2,
               strokeAlign: BorderSide.strokeAlignCenter),
-           color: check?AppColor.defaultColor:Colors.white,
+          color: check?AppColor.defaultColor:Colors.white,
           borderRadius: BorderRadius.circular(2),
         ),
         padding: padding ?? EdgeInsets.all(0.5.w),

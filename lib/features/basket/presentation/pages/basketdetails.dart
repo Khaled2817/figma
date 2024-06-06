@@ -10,12 +10,16 @@ import 'package:untitled/features/basket/presentation/widgets/dialog.dart';
 import '../widgets/wraprow.dart';
 
 class BasketDetails extends StatelessWidget {
-var controller=TextEditingController(); 
+var controller=TextEditingController();
+
+  BasketDetails({super.key}); 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        leading: Icon(Icons.arrow_back_ios),
+        elevation: 0,
         title: Text(
           "تفاصيل الطلب",
           style: TextStyleClass.semiBigBoldStyle(),
@@ -29,14 +33,14 @@ var controller=TextEditingController();
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              ContainerProductName(),
+              const ContainerProductName(),
               SizedBox(height: 1.h),
               Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
                     "الموقع",
-                    style: TextStyleClass.semiStyle(color: Color(0xff8F8989)),
+                    style: TextStyleClass.semiStyle(color: const Color(0xff8F8989)),
                   ),
                 ],
               ),
@@ -44,15 +48,15 @@ var controller=TextEditingController();
                 height: 1.h,
               ),
 TextFieldWidget(controller:controller,hintText: "تم اختيار الموقع عبر الخريطة مسبقا",textAlign:TextAlign.right,
-prefix:Image.asset("${Images.pinaltfill}"),),
+suffix:Image.asset(Images.pinaltfill),),
 
             //  DetailsTextformFild(),
-              WrapRow(),
+              const WrapRow(),
               SizedBox(
                 height: 2.h,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text("طريقة الدفع", style: TextStyleClass.semiHeadStyle()),
                 ],
@@ -60,7 +64,7 @@ prefix:Image.asset("${Images.pinaltfill}"),),
               SizedBox(
                 height: 1.h,
               ),
-              BuyContainer(),
+              const BuyContainer(),
               SizedBox(
                 height: 5.h,
               ),
@@ -70,7 +74,7 @@ prefix:Image.asset("${Images.pinaltfill}"),),
                   height: 6.h,
                   width: 80.w,
                   decoration: BoxDecoration(
-                      color: Color(0xff264653),
+                      color: const Color(0xff264653),
                       borderRadius: BorderRadius.circular(2.w)),
                   child: Center(
                       child: Text(

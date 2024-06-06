@@ -1,4 +1,4 @@
-class Images{
+class Images {
 static const String shopsIcon="assets/images/shops_icon.svg";
 static const String agentsIcon="assets/images/agents_icon.svg";
 static const String greysearchicon="assets/images/grey_search_icon.svg";
@@ -69,8 +69,25 @@ static const String home="assets/images/home.png";
 static const String chats="assets/images/chats.png";
 static const String account="assets/images/account.png";
 static const String orders="assets/images/orders.png";
+static const String homee="assets/images/homee.svg";
+static const String chat="assets/images/chat.svg";
+static const String accountt="assets/images/accountt.svg";
+static const String order="assets/images/ordeer.svg";
 static const String done="assets/images/Done.png";
 static const String talabat="assets/images/talabat.png";
 static const String time="assets/images/time.svg";
 static const String shopp="assets/images/shopp.svg";
+static const String vediolist="assets/images/vediolist.svg";
+static const String searchvedio="assets/images/searchvedio.svg";
+static const String comments="assets/images/Comments.svg";
+static const String doneround="assets/images/Done_round.svg";
+static const String like="assets/images/Like.svg";
+static const String sharvedio="assets/images/sharvedio.svg";
+static const String star="assets/images/Star_fill.svg";
+static const String image1="assets/images/image1.png";
+static const String logo="assets/images/logo.png";
+static const String search="assets/images/search.svg";
+static const String image22="assets/images/image22.png";
+static const String stars="assets/images/stars.svg";
 }
+

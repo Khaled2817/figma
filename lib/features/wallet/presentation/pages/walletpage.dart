@@ -25,7 +25,7 @@ class WalletPage extends StatelessWidget {
         width: 100.w,
         child: Column(
           children: <Widget>[
-            Palance(),
+            const Palance(),
             SizedBox(height: 6.h,),
             ButtonWidget(onTap: () {  }, 
             text: 'اضافة رصيد',textStyle: TextStyleClass.semiBoldStyle(color: Colors.white),),
@@ -33,11 +33,11 @@ class WalletPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Text("سجل الرصيد",style: TextStyleClass.semiStyle(color: Color(0xffB9C0C9)),),
+                Text("سجل الرصيد",style: TextStyleClass.semiStyle(color: const Color(0xffB9C0C9)),),
               ],
             ),
               SizedBox(height: 3.h,),
-            WalletWrap()
+            const WalletWrap()
           ],
         ),
       ),

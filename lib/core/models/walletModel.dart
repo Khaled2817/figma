@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
-import 'package:untitled/core/widget/Svg_Icon/svg_widget.dart';
+import 'package:untitled/core/widget/svg_widget.dart';
 class WalletModel {
 String priceText;
 String headText;

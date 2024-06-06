@@ -5,7 +5,7 @@ import 'package:untitled/core/constants/constants.dart';
   showDialog(
     context: Constants.globalContext(),
     builder: (BuildContext context) {
-      return AlertDialog(
+      return const AlertDialog(
         title: Text('Title'),
         content: Text('This is the content of the dialog.'),
         actions: <Widget>[

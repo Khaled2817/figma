@@ -2,10 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
-import 'package:untitled/config/app_color.dart';
 import 'package:untitled/config/text_style.dart';
-import 'package:untitled/features/market/presentation/provider/provider.dart';
-import 'package:untitled/features/market/presentation/widgets/Cards/Cards.dart';
 import 'package:untitled/features/wallet/presentation/provider/walletPageProvider.dart';
 
 class WalletWrap extends StatelessWidget {
@@ -39,7 +36,7 @@ class WalletWrap extends StatelessWidget {
                   SizedBox(
                     width: 3.w,
                   ),
-                  Text("${myProvider.walletListPage[index].priceText}",
+                  Text(myProvider.walletListPage[index].priceText,
                       style: TextStyleClass.semiStyle(
                           color: myProvider
                               .walletListPage[index].colorTextandcontainer)),
@@ -49,16 +46,16 @@ class WalletWrap extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         Text(
-                          "${myProvider.walletListPage[index].headText}",
+                          myProvider.walletListPage[index].headText,
                           style:
-                              TextStyleClass.semiStyle(color: Color(0xff074F4F)),
+                              TextStyleClass.semiStyle(color: const Color(0xff074F4F)),
                         ),
                         SizedBox(
                           height: 2.h,
                         ),
-                        Text("${myProvider.walletListPage[index].hintText}",
+                        Text(myProvider.walletListPage[index].hintText,
                             style: TextStyleClass.normalStyle(
-                                color: Color(0xffBFBFBF)))
+                                color: const Color(0xffBFBFBF)))
                       ],
                     ),
                   )

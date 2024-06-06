@@ -8,10 +8,10 @@ class MyWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Container(
+      body: SizedBox(
         height: 100.h,
         width: 100.w,
-        child: SizedBox.shrink(),
+        child: const SizedBox.shrink(),
       ),
     );
   }

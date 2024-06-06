@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:sizer/sizer.dart';
 import 'package:untitled/config/text_style.dart';
 import 'package:untitled/core/constants/images.dart';
-import 'package:untitled/core/helper_funct/navigation.dart';
+import 'package:untitled/core/helper_function/navigation.dart';
 import 'package:untitled/features/wallet/presentation/pages/walletpage.dart';
 
 class ContainerMoney extends StatelessWidget {
@@ -24,16 +23,16 @@ class ContainerMoney extends StatelessWidget {
           padding: EdgeInsets.all(5.w),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [ Row(
             children: [
-             Text("1222 RS",style: TextStyleClass.semiBoldStyle(color: Color(0xffF2A361))), 
-          Row(
-            children: [
-              InkWell(child: Text("الرصيد",style: TextStyleClass.semiHeadBoldStyle(),),onTap: (){navP(WalletPage());},),
+              InkWell(child: Text("الرصيد",style: TextStyleClass.semiHeadBoldStyle(),),onTap: (){navP(const WalletPage());},),
               SizedBox(width: 4.w,),
-              Image.asset("${Images.dollars}"),
+              Image.asset(Images.dollars),
               
             ],
-          )
+          ),
+             Text("1222 RS",style: TextStyleClass.semiBoldStyle(color: const Color(0xffF2A361))), 
+         
             ],
           
           ),
