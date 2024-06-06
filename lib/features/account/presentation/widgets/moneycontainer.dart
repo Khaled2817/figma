@@ -25,9 +25,9 @@ class ContainerMoney extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [ Row(
             children: [
-              InkWell(child: Text("الرصيد",style: TextStyleClass.semiHeadBoldStyle(),),onTap: (){navP(const WalletPage());},),
+            Image.asset(Images.dollars),
               SizedBox(width: 4.w,),
-              Image.asset(Images.dollars),
+              InkWell(child: Text("الرصيد",style: TextStyleClass.semiHeadBoldStyle(),),onTap: (){navP(const WalletPage());},),
               
             ],
           ),

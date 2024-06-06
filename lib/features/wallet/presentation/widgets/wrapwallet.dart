@@ -23,27 +23,10 @@ class WalletWrap extends StatelessWidget {
               padding:  EdgeInsets.all(2.w),
               child: Row(
                 children: <Widget>[
-                  Container(
-                    height: 6.h,
-                    width: 12.w,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(3.w),
-                      color:
-                          myProvider.walletListPage[index].colorTextandcontainer,
-                    ),
-                    child: myProvider.walletListPage[index].containerimage,
-                  ),
-                  SizedBox(
-                    width: 3.w,
-                  ),
-                  Text(myProvider.walletListPage[index].priceText,
-                      style: TextStyleClass.semiStyle(
-                          color: myProvider
-                              .walletListPage[index].colorTextandcontainer)),
-                              SizedBox(width: 2.w,),
-                  Expanded(
+
+                   Expanded(
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           myProvider.walletListPage[index].headText,
@@ -58,7 +41,26 @@ class WalletWrap extends StatelessWidget {
                                 color: const Color(0xffBFBFBF)))
                       ],
                     ),
-                  )
+                  ),
+                 Text(myProvider.walletListPage[index].priceText,
+                      style: TextStyleClass.semiStyle(
+                          color: myProvider
+                              .walletListPage[index].colorTextandcontainer)),
+                  SizedBox(
+                    width: 3.w,
+                  ),
+                   Container(
+                    height: 6.h,
+                    width: 12.w,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(3.w),
+                      color:
+                          myProvider.walletListPage[index].colorTextandcontainer,
+                    ),
+                    child: myProvider.walletListPage[index].containerimage,
+                  ),
+                              SizedBox(width: 2.w,),
+                 
                 ],
               ),
             ),

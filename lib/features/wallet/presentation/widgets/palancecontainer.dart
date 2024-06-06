@@ -17,19 +17,17 @@ class Palance extends StatelessWidget {
           svg: Images.wallet,
           width: 91.w,
         ),
-        Positioned(
-           top: 5.h,
-          left: 55.w,
-            child: Text(
-          "الرصيد",
-          style: TextStyleClass.semiHeadBoldStyle(color: Colors.white),
-        )),
         SizedBox(height: 2.w,),
         Positioned(
-            top: 5.h,
+            top: 6.h,
             left: 55.w,
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                     Text(
+          "الرصيد",
+          style: TextStyleClass.semiHeadBoldStyle(color: Colors.white),
+        ),
                 Text(
                   "ر.س 1.234",
                   style: TextStyleClass.semiHeadBoldStyle(color: Colors.white),

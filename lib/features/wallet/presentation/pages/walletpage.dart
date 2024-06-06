@@ -12,7 +12,10 @@ class WalletPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       appBar: AppBar(
+         leading: Icon(Icons.arrow_back_ios),
+          elevation: 0,
         title: Text(
           "المحفظه",
           style: TextStyleClass.headBoldStyle(),
@@ -31,7 +34,7 @@ class WalletPage extends StatelessWidget {
             text: 'اضافة رصيد',textStyle: TextStyleClass.semiBoldStyle(color: Colors.white),),
              SizedBox(height: 3.h,),
             Row(
-              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Text("سجل الرصيد",style: TextStyleClass.semiStyle(color: const Color(0xffB9C0C9)),),
               ],
