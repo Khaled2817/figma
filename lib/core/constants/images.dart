@@ -89,5 +89,22 @@ static const String logo="assets/images/logo.png";
 static const String search="assets/images/search.svg";
 static const String image22="assets/images/image22.png";
 static const String stars="assets/images/stars.svg";
+static const String helalpng="assets/images/helalpng.png";
+static const String alhyy="assets/images/alhyy.png";
+static const String pizzaa="assets/images/pizzaa.png";
+static const String videolist="assets/images/video.svg";
+static const String searchapp="assets/images/searchapp.svg";
+static const String followme="assets/images/followme.svg";
+static const String star1="assets/images/star1.svg";
+static const String prof1="assets/images/prof1.png";
+static const String videoFileFill="assets/images/Video_file_fill.svg";
+static const String imagebox="assets/images/imagebox.svg";
+static const String whats="assets/images/whats.svg";
+static const String call="assets/images/call.svg";
+static const String massagee="assets/images/massagee.svg";
+static const String dollardone="assets/images/dollardone.svg";
+static const String dollarlist="assets/images/dollarlist.svg";
+static const String box="assets/images/box.svg";
+static const String mm="assets/images/mm.svg";
 }
 

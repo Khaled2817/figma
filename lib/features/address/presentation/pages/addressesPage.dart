@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:untitled/config/text_style.dart';
 import 'package:untitled/core/constants/constants.dart';
+import 'package:untitled/core/helper_function/navigation.dart';
 import 'package:untitled/features/address/presentation/widgets/FloatingButtom.dart';
 import 'package:untitled/features/address/presentation/widgets/wrapAddress.dart';
+import 'package:untitled/features/mylocation/presentation/pages/locatin_page.dart';
 
 class AddressesPage extends StatelessWidget {
   const AddressesPage({super.key});
@@ -15,7 +17,7 @@ class AddressesPage extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       appBar: AppBar(
         elevation: 0,
-        leading: Icon(Icons.arrow_back_ios),
+        leading: InkWell(onTap:(){navP(LocationPage());} ,child: Icon(Icons.arrow_back_ios)),
         title: Text(
           "عناويني",
           style: TextStyleClass.headBoldStyle(),

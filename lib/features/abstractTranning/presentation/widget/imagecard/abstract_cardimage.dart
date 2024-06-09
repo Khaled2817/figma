@@ -2,10 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:untitled/config/app_color.dart';
 import 'package:untitled/config/text_style.dart';
-import 'package:untitled/core/helper_function/navigation.dart';
 import 'package:untitled/core/models/abstract_model.dart';
-
-import 'package:untitled/features/Product/presentation/pages/productPage.dart';
 
 class AbstractImageCard extends StatelessWidget {
 AbstractModel abstractModel;

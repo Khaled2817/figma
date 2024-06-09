@@ -51,7 +51,7 @@ class ButtomNavigatorBarWidget extends StatelessWidget {
           elevation: 10,
           selectedFontSize: 10,
           type: BottomNavigationBarType.fixed,
-          fixedColor: AppColor.defaultColor,
+          fixedColor: AppColor.secColor,
           unselectedItemColor: Colors.grey,
           //selectedItemColor: Colors.red,
           showUnselectedLabels: true,
