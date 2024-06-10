@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 import 'package:untitled/config/text_style.dart';
 import 'package:untitled/core/widget/button_widget.dart';
+import 'package:untitled/core/widget/list_text_field.dart';
 import 'package:untitled/core/widget/text_field.dart';
 import 'package:untitled/features/addMazad/presentation/provider.dart/mazad_provider.dart';
 import 'package:untitled/features/addMazad/presentation/widgets/vedio_container.dart';
@@ -17,22 +18,10 @@ class SpecilaPageshow extends StatelessWidget {
       children: [
         VideoContainer(),
           SizedBox(height: 2.h,),
-        ...List.generate(
-            myprovider.texteditingcontrollerList.length,
-            (index) => Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "${myprovider.textfieldtext(index)}",
-                      style: TextStyleClass.semiBigBoldStyle(
-                          color: Color(0xffA1A1A1)),
-                    ),   SizedBox(height: 1.h,),
-                    TextFieldWidget(
-                      controller: myprovider.texteditingcontrollerList[index],
-                     // suffix: Icon(Icons.keyboard_arrow_down_rounded,size: 8.w,),
-                    ),
-                  ],
-                )),
+        ListTextFieldWidget(
+          
+          padding: 2.w,
+          inputs: myprovider.addPageshowlist2, labelStyle: TextStyleClass.normalBoldStyle(color: Color(0xffB9C0C9)),),
                    SizedBox(height: 4.h,),
         Container(
           width: 100.w,

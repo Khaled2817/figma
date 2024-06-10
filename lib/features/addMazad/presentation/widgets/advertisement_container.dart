@@ -25,8 +25,8 @@ Row(
       child: InkWell(
         onTap:(){} ,
         child: Container(
-        height: 20.h,
-        width: 40.w,
+        height: 23.h,
+        width: 42.w,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(2.w),
         ),
@@ -54,8 +54,8 @@ Row(
       child: InkWell(
         onTap:(){} ,
         child: Container(
-        height: 20.h,
-        width: 40.w,
+        height: 23.h,
+        width: 42.w,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(2.w),
         ),

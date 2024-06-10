@@ -9,8 +9,10 @@ import '../models/text_field_model.dart';
 import 'text_field.dart';
 
 class ListTextFieldWidget extends StatelessWidget {
-  const ListTextFieldWidget({super.key, required this.inputs});
+  const ListTextFieldWidget({super.key, required this.inputs, this.labelStyle, this.padding});
   final List<TextFieldModel> inputs;
+   final TextStyle? labelStyle;
+   final dynamic? padding;
   @override
   Widget build(BuildContext context) {
     List<String> list = ["phone", "phone_number", "whatsapp"];
@@ -92,26 +94,30 @@ class ListTextFieldWidget extends StatelessWidget {
                   hintText: inputs[index].hint,
                   prefix: inputs[index].prefix,
                   readOnly: inputs[index].readOnly,
-                  titleWidget: inputs[index].title ??
-                      Row(
-                        children: [
-                          inputs[index].image != null
-                              ? SvgWidget(svg: inputs[index].image!)
-                              : const SizedBox.shrink(),
-                          SizedBox(width: 2.w),
-                          inputs[index].label != null
-                              ? Text(
-                                  LanguageProvider.translate(
-                                      'inputs', inputs[index].label!),
-                                  style: TextStyleClass.normalStyle(),
-                                )
-                              : const SizedBox.shrink(),
-                        ],
-                      ),
+                  titleWidget: Padding(
+                    padding:EdgeInsets.only(bottom:padding??0),
+                    child: inputs[index].title ??
+                        Row(
+                          children: [
+                            inputs[index].image != null
+                                ? SvgWidget(svg: inputs[index].image!)
+                                : const SizedBox.shrink(),
+                            SizedBox(width: 2.w),
+                            inputs[index].label != null
+                                ? Text(
+                                    LanguageProvider.translate(
+                                        'inputs', inputs[index].label!),
+                                    style: labelStyle,
+                                  )
+                                : const SizedBox.shrink(),
+                          ],
+                        ),
+                  ),
                   titleText: inputs[index].titleText,
                   width: inputs[index].width,
                   contentPadding: inputs[index].contentPadding ??
                       EdgeInsets.symmetric(horizontal: 3.w, vertical: 2.h),
+                       labelStyle:labelStyle ,
                 )
         ]);})));
   }

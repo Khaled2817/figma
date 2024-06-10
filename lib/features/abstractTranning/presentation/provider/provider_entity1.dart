@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/core/constants/images.dart';
-import 'package:untitled/core/helper_function/navigation.dart';
 import 'package:untitled/core/models/abstract_model.dart';
 import 'package:untitled/features/abstractTranning/domain/entities/abstract_entity2.dart';
 

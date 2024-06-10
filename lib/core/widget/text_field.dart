@@ -21,7 +21,10 @@ class TextFieldWidget extends StatelessWidget {
   final TextStyle? style,hintStyle;
   final TextAlign? textAlign;
   final EdgeInsets? contentPadding;
-  const TextFieldWidget({this.maxLines = 1,this.labelText,this.cursorColor,
+  final TextStyle? labelStyle;
+  const TextFieldWidget({
+    this.labelStyle,
+    this.maxLines = 1,this.labelText,this.cursorColor,
   required this.controller,this.height,this.width,this.style,this.focusedBorder,
     this.enabledBorder,
   this.color,this.borderColor,this.borderRadius,this.counter,
@@ -31,7 +34,7 @@ class TextFieldWidget extends StatelessWidget {
   this.onSuffixTap,this.otp = false,this.prefix,this.readOnly = false,this.suffix,
   this.onTextTap,this.titleWidget,
   this.validator,this.verticalPadding,super.key, this.minLines,this.contentPadding, this.hintText,
-    this.titleText, this.elevation, this.hintStyle});
+    this.titleText, this.elevation, this.hintStyle,});
   @override
   Widget build(BuildContext context) {
     return Padding(

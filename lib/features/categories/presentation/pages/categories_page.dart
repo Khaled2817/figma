@@ -42,15 +42,16 @@ class Categories extends StatelessWidget {
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(3.w)),
-                    child: TextFieldWidget(
-                      borderColor: Colors.white,
-                      controller: controll,
-                      hintText: "ابحث عن اي منتج لدينا",
-                      hintStyle:
-                          TextStyleClass.semiStyle(color: Color(0xffBBBBBB)),
-                      prefix: const SvgWidget(svg: Images.search),
-                      textAlign: TextAlign.center,
-                    )),
+                    // child: TextFieldWidget(
+                    //   borderColor: Colors.white,
+                    //   controller: controll,
+                    //   hintText: "ابحث عن اي منتج لدينا",
+                    //   hintStyle:
+                    //       TextStyleClass.semiStyle(color: Color(0xffBBBBBB)),
+                    //   prefix: const SvgWidget(svg: Images.search),
+                    //   textAlign: TextAlign.center,
+                    // )
+                    ),
               ),
               SizedBox(
                 height: 4.h,

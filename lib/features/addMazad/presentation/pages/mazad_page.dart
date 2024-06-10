@@ -6,9 +6,6 @@ import 'package:untitled/core/constants/constants.dart';
 import 'package:untitled/features/addMazad/presentation/provider.dart/mazad_provider.dart';
 import 'package:untitled/features/addMazad/presentation/widgets/container_with_tap1.dart';
 import 'package:untitled/features/addMazad/presentation/widgets/container_with_tap2.dart';
-import 'package:untitled/features/addMazad/presentation/widgets/special_page_show1.dart';
-import 'package:untitled/features/addMazad/presentation/widgets/vedio_container.dart';
-
 class MazadPage extends StatelessWidget {
   const MazadPage({super.key});
 
