@@ -10,7 +10,7 @@ class WrapConection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var myprovider=Provider.of<MazadProvider>(context);
+    var myprovider = Provider.of<MazadProvider>(context);
     return SizedBox(
       width: 100.w,
       child: Wrap(
@@ -18,55 +18,57 @@ class WrapConection extends StatelessWidget {
         alignment: WrapAlignment.spaceBetween,
         children: <Widget>[
           ...List.generate(
-             myprovider.contectionList.length,
+              myprovider.contectionList.length,
               (index) => Container(
-        height: 9.h,
-        width: 100.w,
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(2.w),
-        color: Color.fromARGB(255, 255, 255, 255)
-        ),
-        child: Padding(
-          padding: EdgeInsets.all(2.w),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-             Expanded(
-               child: Row(children: [ myprovider.contectionList[index].icon,
-               SizedBox(width: 3.w,),
-                Expanded(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        maxLines: 2,
-                        overflow: TextOverflow.clip,
-                        myprovider.contectionList[index].text2,
-                        style:
-                            TextStyleClass.semiBoldStyle(color: Color(0xff615D5C)),
+                    height: 9.h,
+                    width: 100.w,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(2.w),
+                        color: Color.fromARGB(255, 255, 255, 255)),
+                    child: Padding(
+                      padding: EdgeInsets.all(2.w),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          Expanded(
+                            child: Row(
+                              children: [
+                                myprovider.contectionList[index].icon,
+                                SizedBox(
+                                  width: 3.w,
+                                ),
+                                Expanded(
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        maxLines: 2,
+                                        overflow: TextOverflow.clip,
+                                        myprovider.contectionList[index].text2,
+                                        style: TextStyleClass.semiBoldStyle(
+                                            color: Color(0xff615D5C)),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            height: 3.h,
+                            width: 6.w,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(2.w),
+                                border: Border.all(color: Color(0xffE6EEF0))),
+                          )
+                        ],
                       ),
-                    ],
-                  ),
-                ),],),
-             ),
-       
-              Container(
-               height: 3.h,
-               width: 6.w,
-               decoration: BoxDecoration(
-                 color: Colors.white,
-borderRadius: BorderRadius.circular(2.w),
-border: Border.all(color: Color(0xffE6EEF0))
-
-               ),
-              )
-            ],
-          ),
-        ),
-      )
-                  
-                  )
+                    ),
+                  ))
         ],
       ),
     );

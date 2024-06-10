@@ -68,7 +68,7 @@ class MazadProvider extends ChangeNotifier {
         label: 'اختر القسم الرئيسي',
         suffix: Icon(
           Icons.keyboard_arrow_down_rounded,
-          //size: 9.w,
+          size: 8.w,
           color: Colors.black,
         )
         
@@ -78,7 +78,7 @@ class MazadProvider extends ChangeNotifier {
         label: 'اختر القسم الفرعي',
          suffix: Icon(
           Icons.keyboard_arrow_down_rounded,
-          //size: 9.w,
+          size: 8.w,
           color: Colors.black,
         )),
     TextFieldModel(
@@ -98,10 +98,10 @@ Text("وصف الاعلان")
     TextFieldModel(
         controller: TextEditingController(),
         label: 'اختر القسم الرئيسي',
-        
+
         suffix: Icon(
           Icons.keyboard_arrow_down_rounded,
-         // size: 9.w,
+          size: 8.w,
           color: Colors.black,
         )
         
@@ -111,7 +111,7 @@ Text("وصف الاعلان")
         label: 'اختر القسم الفرعي',
          suffix: Icon(
           Icons.keyboard_arrow_down_rounded,
-         // size: 9.w,
+          size: 8.w,
           color: Colors.black,
         )),
     TextFieldModel(
@@ -119,7 +119,7 @@ Text("وصف الاعلان")
          label: 'مدة المزاد' ,
          suffix: Icon(
           Icons.keyboard_arrow_down_rounded,
-          //size: 9.w,
+          size: 8.w,
           color: Colors.black,
         )),
     TextFieldModel(controller: TextEditingController(),

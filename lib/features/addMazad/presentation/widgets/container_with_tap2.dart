@@ -7,20 +7,27 @@ import 'package:untitled/features/addMazad/presentation/provider.dart/mazad_prov
 class ContainerTap2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-     var myprovider=Provider.of<MazadProvider>(context);
+    var myprovider = Provider.of<MazadProvider>(context);
     return Material(
       elevation: 1.w,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(2.w)),
       child: InkWell(
-        onTap:(){myprovider.toggel2();} ,
+        onTap: () {
+          myprovider.toggel2();
+        },
         child: Container(
-        height: 5.h,
-        width: 40.w,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(2.w),
-          color: myprovider.containerColor2()
-        ),
-        child:Center(child:Text("اضافة مزاد",style:TextStyleClass.semiHeadBoldStyle(color:myprovider.textColor2()),) ,),
+          height: 5.h,
+          width: 40.w,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(2.w),
+              color: myprovider.containerColor2()),
+          child: Center(
+            child: Text(
+              "اضافة مزاد",
+              style: TextStyleClass.semiHeadBoldStyle(
+                  color: myprovider.textColor2()),
+            ),
+          ),
         ),
       ),
     );

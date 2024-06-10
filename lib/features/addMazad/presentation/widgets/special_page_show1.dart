@@ -17,12 +17,17 @@ class SpecilaPageshow extends StatelessWidget {
     return Column(
       children: [
         VideoContainer(),
-          SizedBox(height: 2.h,),
+        SizedBox(
+          height: 2.h,
+        ),
         ListTextFieldWidget(
-          
           padding: 2.w,
-          inputs: myprovider.addPageshowlist2, labelStyle: TextStyleClass.normalBoldStyle(color: Color(0xffB9C0C9)),),
-                   SizedBox(height: 4.h,),
+          inputs: myprovider.addPageshowlist2,
+          labelStyle: TextStyleClass.normalBoldStyle(color: Color(0xffB9C0C9)),
+        ),
+        SizedBox(
+          height: 4.h,
+        ),
         Container(
           width: 100.w,
           height: 7.h,
