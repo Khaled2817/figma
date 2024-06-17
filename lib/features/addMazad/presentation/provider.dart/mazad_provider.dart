@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:sizer/sizer.dart';
 import 'package:untitled/core/constants/images.dart';
 import 'package:untitled/core/helper_function/navigation.dart';
 import 'package:untitled/core/models/text_field_model.dart';
 import 'package:untitled/core/widget/svg_widget.dart';
-import 'package:untitled/core/widget/text_field.dart';
 import 'package:untitled/features/addMazad/data/models/sallary_model.dart';
 import 'package:untitled/features/addMazad/presentation/pages/add_advertisement.dart';
 import 'package:untitled/features/addMazad/presentation/widgets/add_page_show.dart';
@@ -66,9 +64,10 @@ class MazadProvider extends ChangeNotifier {
     TextFieldModel(
         controller: TextEditingController(),
         label: 'اختر القسم الرئيسي',
+       
         suffix: Icon(
           Icons.keyboard_arrow_down_rounded,
-          size: 8.w,
+         // size: 8.w,
           color: Colors.black,
         )
         
@@ -78,12 +77,12 @@ class MazadProvider extends ChangeNotifier {
         label: 'اختر القسم الفرعي',
          suffix: Icon(
           Icons.keyboard_arrow_down_rounded,
-          size: 8.w,
+          //size: 8.w,
           color: Colors.black,
         )),
     TextFieldModel(
         controller: TextEditingController(), label: 'عنوان الاعلان '),
-    TextFieldModel(controller: TextEditingController(), label: 'وصف الاعلان ')
+    //TextFieldModel(controller: TextEditingController(), label: 'وصف الاعلان ')
   ];
  List<Text> textList=[
 
@@ -101,7 +100,7 @@ Text("وصف الاعلان")
 
         suffix: Icon(
           Icons.keyboard_arrow_down_rounded,
-          size: 8.w,
+        //  size: 8.w,
           color: Colors.black,
         )
         
@@ -111,7 +110,7 @@ Text("وصف الاعلان")
         label: 'اختر القسم الفرعي',
          suffix: Icon(
           Icons.keyboard_arrow_down_rounded,
-          size: 8.w,
+         // size: 8.w,
           color: Colors.black,
         )),
     TextFieldModel(
@@ -119,7 +118,7 @@ Text("وصف الاعلان")
          label: 'مدة المزاد' ,
          suffix: Icon(
           Icons.keyboard_arrow_down_rounded,
-          size: 8.w,
+         // size: 8.w,
           color: Colors.black,
         )),
     TextFieldModel(controller: TextEditingController(),

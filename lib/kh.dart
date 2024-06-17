@@ -12,15 +12,25 @@ import 'package:untitled/features/account/presentation/provider/account_provider
 import 'package:untitled/features/addMazad/presentation/pages/add_advertisement.dart';
 import 'package:untitled/features/addMazad/presentation/pages/mazad_page.dart';
 import 'package:untitled/features/addMazad/presentation/provider.dart/mazad_provider.dart';
+import 'package:untitled/features/add_order/presentation/provider/provider_add_item.dart';
 import 'package:untitled/features/address/presentation/provider/addressesProvider.dart';
 import 'package:untitled/features/banner/presentation/provider/provider.dart';
 import 'package:untitled/features/basket/presentation/provider/basketprovider.dart';
 import 'package:untitled/features/categories/presentation/provider/categories_provider.dart';
+import 'package:untitled/features/check_out_order/presentation/provider/Provider.dart';
 import 'package:untitled/features/home/presentation/provider/homeprovider.dart';
 import 'package:untitled/features/language/domain/entities/app_localizations.dart';
 import 'package:untitled/features/language/presentation/provider/language_provider.dart';
+import 'package:untitled/features/main/presentation/pages/main_page.dart';
 import 'package:untitled/features/main/presentation/provider/main_page_provider.dart';
 import 'package:untitled/features/market/presentation/provider/provider.dart';
+import 'package:untitled/features/mazad/presentation/pages/mazad_page.dart';
+import 'package:untitled/features/mazad/presentation/provider/mazad_provider.dart';
+import 'package:untitled/features/menu_information_comment/presentation/pages/menu_page.dart';
+import 'package:untitled/features/menu_information_comment/presentation/provider/menu_provider.dart';
+import 'package:untitled/features/menu_information_comment/presentation/widgets/topbar.dart';
+import 'package:untitled/features/order_stat/presentation/provider/orderstatus_provider.dart';
+import 'package:untitled/features/orders/presentation/provider/order_provider.dart';
 import 'package:untitled/features/video_featurs/presentation/pages/video_page.dart';
 import 'package:untitled/features/video_featurs/presentation/provider/video_provider.dart';
 import 'package:untitled/features/video_featurs/presentation/widgets/content_view.dart';
@@ -81,75 +91,82 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-        providers: [
-          ChangeNotifierProvider.value(value: MarketProvider()),
-          ChangeNotifierProvider.value(
-              value: BannerProvider()..getnearbanners()),
-          ChangeNotifierProvider.value(value: HomeProvider()),
-          ChangeNotifierProvider.value(value: BasketProvider()),
-       //   ChangeNotifierProvider.value(value: MainPageProvider()),
-          ChangeNotifierProvider.value(value: ProductProvider()),
-          ChangeNotifierProvider.value(value: AccountProvider()),
-          ChangeNotifierProvider.value(value: WalletPageProvider()),
-          ChangeNotifierProvider.value(value: AddressesProvider()),
-          ChangeNotifierProvider.value(value: AbstractProvider1()),
-          ChangeNotifierProvider.value(value: AbstractProvider2()),
-          ChangeNotifierProvider.value(value: MainProvider()),
-          ChangeNotifierProvider.value(value: CategoriesProvider()),
-          ChangeNotifierProvider.value(value: VideoProvider()),
-          ChangeNotifierProvider.value(value: MazadProvider()),
-        ],
-        child: ChangeNotifierProvider<LanguageProvider>(
-            create: (_) => language,
-            child: Consumer<LanguageProvider>(builder: (context, lang, _) {
-              return AnnotatedRegion(
-                  value: barColor(),
-                  child: Sizer(
-                    builder: (context, orientation, deviceType) {
-                      Constants.isTablet = (deviceType == DeviceType.tablet);
-                      return MaterialApp(
-                          title: 'khaled',
-                          debugShowCheckedModeBanner: false,
-                          navigatorObservers: [routeObserver],
-                          navigatorKey: Constants.navState,
-                          locale: lang.appLocal,
-                          supportedLocales: LanguageProvider.languages,
-                          builder: (context, child) {
-                            return Theme(
-
-                                data: defaultTheme.copyWith(
-                                    appBarTheme: AppBarTheme(
-                            
-                                  color: Colors.white,
-                                  centerTitle: true,
-                                  foregroundColor: AppColor.defaultColor,
-                                  titleTextStyle:
-                                      TextStyleClass.semiHeadBoldStyle(
-                                          color: AppColor.defaultColor),
-                                )),
-                                child: Container(
+    return Sizer(
+         builder: (context, orientation, deviceType) {
+          Constants.isTablet = (deviceType == DeviceType.tablet);
+          return MultiProvider(
+          providers: [
+            ChangeNotifierProvider.value(value: MarketProvider()),
+            ChangeNotifierProvider.value(
+                value: BannerProvider()..getnearbanners()),
+            ChangeNotifierProvider.value(value: HomeProvider()),
+            ChangeNotifierProvider.value(value: BasketProvider()),
+         //   ChangeNotifierProvider.value(value: MainPageProvider()),
+            ChangeNotifierProvider.value(value: ProductProvider()),
+            ChangeNotifierProvider.value(value: AccountProvider()),
+            ChangeNotifierProvider.value(value: WalletPageProvider()),
+            ChangeNotifierProvider.value(value: AddressesProvider()),
+            ChangeNotifierProvider.value(value: AbstractProvider1()),
+            ChangeNotifierProvider.value(value: AbstractProvider2()),
+            ChangeNotifierProvider.value(value: MainProvider()),
+            ChangeNotifierProvider.value(value: CategoriesProvider()),
+            ChangeNotifierProvider.value(value: VideoProvider()),
+            ChangeNotifierProvider.value(value: MazadProvider()),
+            ChangeNotifierProvider.value(value: OrderProvider()),
+            ChangeNotifierProvider.value(value: OrderstatusProvider()),
+            ChangeNotifierProvider.value(value: CheckOutProvider()),
+            ChangeNotifierProvider.value(value: AddOrderProvider()),
+            ChangeNotifierProvider.value(value: MenuProvider()),
+            ChangeNotifierProvider.value(value: MazadProvidersetting()),
+          ],
+          child: ChangeNotifierProvider<LanguageProvider>(
+              create: (_) => language,
+              child: Consumer<LanguageProvider>(builder: (context, lang, _) {
+                return AnnotatedRegion(
+                    value: barColor(),
+                    child: MaterialApp(
+                            title: 'khaled',
+                            debugShowCheckedModeBanner: false,
+                            navigatorObservers: [routeObserver],
+                            navigatorKey: Constants.navState,
+                            locale: lang.appLocal,
+                            supportedLocales: LanguageProvider.languages,
+                            builder: (context, child) {
+                              return Theme(
+      
+                                  data: defaultTheme.copyWith(
+                                      appBarTheme: AppBarTheme(
+                              
                                     color: Colors.white,
-                                    child: SafeArea(
-                                        bottom: true,
-                                        child: SizedBox(
-                                            width: 100.w,
-                                            height: 100.h,
-                                            child:
-                                   Stack(children: [child!])))));
-                          },
-                          localizationsDelegates: const [
-                            CountryLocalizations.delegate,
-                            AppLocalizations.delegate,
-                            GlobalMaterialLocalizations.delegate,
-                            GlobalWidgetsLocalizations.delegate,
-                            GlobalCupertinoLocalizations.delegate
-                          ],
-                          theme: defaultTheme,
-                          home: MazadPage());
-                    },
-                  ));
-            })));
+                                    centerTitle: true,
+                                    foregroundColor: AppColor.defaultColor,
+                                    titleTextStyle:
+                                        TextStyleClass.semiHeadBoldStyle(
+                                            color: AppColor.defaultColor),
+                                  )),
+                                  child: Container(
+                                      color: Colors.white,
+                                      child: SafeArea(
+                                          bottom: true,
+                                          child: SizedBox(
+                                              width: 100.w,
+                                              height: 100.h,
+                                              child:
+                                     Stack(children: [child!])))));
+                            },
+                            localizationsDelegates: const [
+                              CountryLocalizations.delegate,
+                              AppLocalizations.delegate,
+                              GlobalMaterialLocalizations.delegate,
+                              GlobalWidgetsLocalizations.delegate,
+                              GlobalCupertinoLocalizations.delegate
+                            ],
+                            theme: defaultTheme,
+                            home: MazadPage2())
+                    
+                    );
+              })));},
+    );
   }
 }
 

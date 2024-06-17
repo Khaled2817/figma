@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 import 'package:untitled/config/app_color.dart';
 import 'package:untitled/config/text_style.dart';
 import 'package:untitled/core/constants/images.dart';
+import 'package:untitled/features/orders/presentation/provider/order_provider.dart';
 
 class OrderContainer extends StatelessWidget {
   const OrderContainer({super.key});
 
   @override
   Widget build(BuildContext context) {
+    var myprovider=Provider.of<OrderProvider>(context);
     return Material(
       elevation: 1.w,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(2.w)),
