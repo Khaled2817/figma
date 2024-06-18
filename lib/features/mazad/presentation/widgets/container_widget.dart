@@ -14,48 +14,51 @@ class ContainerWidget extends StatelessWidget {
               elevation: 1.w,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(2.w)),
                 child: Container(
-                  padding: appPadding,
+                  padding:  EdgeInsets.symmetric(vertical: 4.w,horizontal: 4.w),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(2.w)
                   ),
-                  height: 7.h,
+               //   height: 7.h,
               width: 100.w,
-              child: Padding(
-                padding:  EdgeInsets.only(right: 4.w),
-                child: Row(
-                 // mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text(
-                      "مزاداتي :",
-                      style: TextStyleClass.normalBoldStyle(color: Color(0xff0087FE)),
-                    ),
-                    SizedBox(width: 2.w,),
-                   SvgWidget(svg: Images.done1),
+              child: Row(
+              //  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Text(
+                    "مزاداتي :",
+                    style: TextStyleClass.normalBoldStyle(color: Color(0xff0087FE)),
+                  ),
+                  SizedBox(width: 5.w,),
+               Expanded(
+                 child: Row(children:<Widget>[  SvgWidget(svg: Images.done1),
                    SizedBox(width: 2.w,),
                     Text(
                       "فعاله",
-                      style: TextStyleClass.normalBoldStyle(),
+                      style: TextStyleClass.normalBoldStyle(color: Color(0xff615D5C)),
                     ),
-                    SizedBox(width: 2.w,),
-                    Text(
-                      "(10)",
-                      style: TextStyleClass.normalBoldStyle(),
-                    ),
-                    SizedBox(width: 3.w,),
-                    SvgWidget(svg: Images.del1),
+                     SizedBox(width: 2.w,),
+                    Expanded(
+                      child: Text(
+                        "(10)",
+                        style: TextStyleClass.normalBoldStyle(color: Color(0xff615D5C)),
+                      ),
+                    )]),
+               ),
+                 
+              Expanded(
+                child: Row(children: <Widget>[    SvgWidget(svg: Images.del1),
                     SizedBox(width: 2.w,),
                     Text(
                       "منتهيه",
-                      style: TextStyleClass.normalBoldStyle(),
+                      style: TextStyleClass.normalBoldStyle(color: Color(0xff615D5C)),
                     ),
                     SizedBox(width: 2.w,),
                     Text(
                       "(10)",
-                      style: TextStyleClass.normalBoldStyle(),
-                    ),
-                  ],
-                ),
+                      style: TextStyleClass.normalBoldStyle(color: Color(0xff615D5C)),
+                    ),],),
+              )
+                ],
               ),
             ));
   }

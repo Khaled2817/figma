@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 import 'package:untitled/core/constants/constants.dart';
 import 'package:untitled/core/constants/images.dart';
-import 'package:untitled/core/widget/svg_widget.dart';
+import 'package:untitled/features/order_stat/presentation/provider/orderstatus_provider.dart';
 import 'package:untitled/features/order_stat/presentation/widgets/buy_conatiner.dart';
 import 'package:untitled/features/order_stat/presentation/widgets/colum_wrap.dart';
 import 'package:untitled/features/order_stat/presentation/widgets/container_top2.dart';
@@ -15,7 +15,7 @@ class OrderStatuPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var myprovider=Provider.of<OrderProvider>(context);
+    var myprovider=Provider.of<OrderstatusProvider>(context);
     return Scaffold(
       appBar: AppBar(
         elevation: 1.w,

@@ -3,8 +3,8 @@ import 'package:sizer/sizer.dart';
 import 'package:untitled/config/text_style.dart';
 
 class WidgetOfAppbarrConatiner extends StatelessWidget {
-  const WidgetOfAppbarrConatiner({super.key});
-
+  const WidgetOfAppbarrConatiner({super.key, required this.text});
+final String text;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -25,7 +25,7 @@ Padding(
       
       Column(
         crossAxisAlignment: CrossAxisAlignment.end,
-        children: [Text("chakout",style: TextStyleClass.semiBigBoldStyle(color: Colors.white),),
+        children: [Text("${text}",style: TextStyleClass.semiBigBoldStyle(color: Colors.white),),
   Container(
     height: 0.3.h,
     width: 15.w,

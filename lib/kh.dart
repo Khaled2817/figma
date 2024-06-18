@@ -9,31 +9,35 @@ import 'package:untitled/features/Product/presentation/productprovider.dart';
 import 'package:untitled/features/abstractTranning/presentation/provider/provider_entity1.dart';
 import 'package:untitled/features/abstractTranning/presentation/provider/provider_entity2.dart';
 import 'package:untitled/features/account/presentation/provider/account_provider.dart';
-import 'package:untitled/features/addMazad/presentation/pages/add_advertisement.dart';
-import 'package:untitled/features/addMazad/presentation/pages/mazad_page.dart';
 import 'package:untitled/features/addMazad/presentation/provider.dart/mazad_provider.dart';
 import 'package:untitled/features/add_order/presentation/provider/provider_add_item.dart';
 import 'package:untitled/features/address/presentation/provider/addressesProvider.dart';
 import 'package:untitled/features/banner/presentation/provider/provider.dart';
 import 'package:untitled/features/basket/presentation/provider/basketprovider.dart';
+import 'package:untitled/features/basketcar/presentation/provider/payment_provider.dart';
+import 'package:untitled/features/car_home/presentation/pages/home_page.dart';
+import 'package:untitled/features/car_home/presentation/provider/home_page_provider.dart';
 import 'package:untitled/features/categories/presentation/provider/categories_provider.dart';
 import 'package:untitled/features/check_out_order/presentation/provider/Provider.dart';
 import 'package:untitled/features/home/presentation/provider/homeprovider.dart';
 import 'package:untitled/features/language/domain/entities/app_localizations.dart';
 import 'package:untitled/features/language/presentation/provider/language_provider.dart';
-import 'package:untitled/features/main/presentation/pages/main_page.dart';
+
 import 'package:untitled/features/main/presentation/provider/main_page_provider.dart';
 import 'package:untitled/features/market/presentation/provider/provider.dart';
-import 'package:untitled/features/mazad/presentation/pages/mazad_page.dart';
+
 import 'package:untitled/features/mazad/presentation/provider/mazad_provider.dart';
-import 'package:untitled/features/menu_information_comment/presentation/pages/menu_page.dart';
+
 import 'package:untitled/features/menu_information_comment/presentation/provider/menu_provider.dart';
-import 'package:untitled/features/menu_information_comment/presentation/widgets/topbar.dart';
+
 import 'package:untitled/features/order_stat/presentation/provider/orderstatus_provider.dart';
 import 'package:untitled/features/orders/presentation/provider/order_provider.dart';
-import 'package:untitled/features/video_featurs/presentation/pages/video_page.dart';
+import 'package:untitled/features/paymentcarapp/presentation/provider/payment_provider.dart';
+import 'package:untitled/features/productsectioncar/presentation/provider/product_section_provider.dart';
+import 'package:untitled/features/sections/presentation/provider/provider_sections.dart';
+
 import 'package:untitled/features/video_featurs/presentation/provider/video_provider.dart';
-import 'package:untitled/features/video_featurs/presentation/widgets/content_view.dart';
+
 import 'package:untitled/features/wallet/presentation/provider/walletPageProvider.dart';
 import 'package:untitled/injection_container.dart';
 import 'config/app_color.dart';
@@ -118,6 +122,11 @@ class MyApp extends StatelessWidget {
             ChangeNotifierProvider.value(value: AddOrderProvider()),
             ChangeNotifierProvider.value(value: MenuProvider()),
             ChangeNotifierProvider.value(value: MazadProvidersetting()),
+            ChangeNotifierProvider.value(value: HomePageProvider()),
+            ChangeNotifierProvider.value(value: ProviderSections()),
+            ChangeNotifierProvider.value(value: ProductSectionProvider()),
+            ChangeNotifierProvider.value(value: PaymentProvideroil()),
+            ChangeNotifierProvider.value(value: PaymentProvider()),
           ],
           child: ChangeNotifierProvider<LanguageProvider>(
               create: (_) => language,
@@ -162,7 +171,7 @@ class MyApp extends StatelessWidget {
                               GlobalCupertinoLocalizations.delegate
                             ],
                             theme: defaultTheme,
-                            home: MazadPage2())
+                            home: HomePageCar())
                     
                     );
               })));},

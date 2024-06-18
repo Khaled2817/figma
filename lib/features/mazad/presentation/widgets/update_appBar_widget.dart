@@ -18,19 +18,21 @@ class UpdateAppbarWidget extends StatelessWidget {
           width: 100.w,
           padding: appPadding,
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               SvgWidget(
                 svg: Images.backawro,
                 color: Colors.white,
               ),
-              SizedBox(
-                width: 30.w,
-              ),
+              // SizedBox(
+              //   width: 26.w,
+              // ),
               Text(
                 textAlign: TextAlign.center,
                 "تحديث البيانات",
                 style: TextStyleClass.headBoldStyle(color: Colors.white),
               ),
+              SizedBox(width: 10.w,)
             ],
           ),  
         

@@ -6,6 +6,7 @@ import 'package:untitled/core/helper_function/navigation.dart';
 import 'package:untitled/core/models/text_field_model.dart';
 import 'package:untitled/core/widget/back_button_widget.dart';
 import 'package:untitled/core/widget/svg_widget.dart';
+import 'package:untitled/core/widget/textform_title_widget.dart';
 import 'package:untitled/features/mazad/data/models/buy_information_model.dart';
 import 'package:untitled/features/mazad/data/models/settings_model.dart';
 import 'package:untitled/features/mazad/data/models/updating_data_model.dart';
@@ -65,93 +66,23 @@ class MazadProvidersetting extends ChangeNotifier {
   List<TextFieldModel> textFieldModelList = [
     TextFieldModel(
         controller: TextEditingController(),
-        title: Row(
-          children: [
-            Text(
-              "اختر نوع الهويه",
-              style: TextStyleClass.semiStyle(color: Color(0xffA1A1A1)),
-            ),
-            Container(
-              height: 2.h,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[SvgWidget(svg: Images.ss)],
-              ),
-            )
-          ],
-        ),
+        title: TextformTitleWidget(text:"اختر نوع الهويه" , widget: SvgWidget(svg: Images.ss)),
         suffix: SvgWidget(svg: Images.downarow)),
     TextFieldModel(
         controller: TextEditingController(),
-        title: Row(
-          children: [
-            Text(
-              "تاريخ الميلاد",
-              style: TextStyleClass.semiStyle(color: Color(0xffA1A1A1)),
-            ),
-            Container(
-              height: 2.h,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[SvgWidget(svg: Images.ss)],
-              ),
-            )
-          ],
-        ),
+        title:TextformTitleWidget(text:   "تاريخ الميلاد" , widget: SvgWidget(svg: Images.ss)),
         suffix: SvgWidget(svg: Images.downarow)),
     TextFieldModel(
-        title: Row(
-          children: [
-            Text(
-              "رقم IBAN",
-              style: TextStyleClass.semiStyle(color: Color(0xffA1A1A1)),
-            ),
-            Container(
-              height: 2.h,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[SvgWidget(svg: Images.ss)],
-              ),
-            )
-          ],
-        ),
+        title:TextformTitleWidget(text:    "رقم IBAN" , widget: SvgWidget(svg: Images.ss)),
         controller: TextEditingController(),
         suffix: SvgWidget(svg: Images.downarow)),
     TextFieldModel(
-        title: Row(
-          children: [
-            Text(
-              "اسم البنك",
-              style: TextStyleClass.semiStyle(color: Color(0xffA1A1A1)),
-            ),
-            Container(
-              height: 2.h,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[SvgWidget(svg: Images.ss)],
-              ),
-            )
-          ],
-        ),
+        title:TextformTitleWidget(text:  "اسم البنك" , widget: SvgWidget(svg: Images.ss)),
         controller: TextEditingController(),
         suffix: SvgWidget(svg: Images.downarow)),
     TextFieldModel(
         controller: TextEditingController(),
-        title: Row(
-          children: [
-            Text(
-              "البريد الاكتروني",
-              style: TextStyleClass.semiStyle(color: Color(0xffA1A1A1)),
-            ),
-            Container(
-              height: 2.h,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[SvgWidget(svg: Images.ss)],
-              ),
-            )
-          ],
-        ),
+        title: TextformTitleWidget(text:  "البريد الاكتروني" , widget: SvgWidget(svg: Images.ss)),
         suffix: SvgWidget(svg: Images.downarow))
   ];
 }

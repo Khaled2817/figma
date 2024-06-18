@@ -15,18 +15,22 @@ class AppbarWidget extends StatelessWidget {
         Container(
           width: 100.w,
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               SvgWidget(
                 svg: Images.backawro,
                 color: Colors.white,
               ),
-              SizedBox(
-                width: 30.w,
-              ),
+              // SizedBox(
+              //   width: 30.w,
+              // ),
               Text(
                 textAlign: TextAlign.center,
                 "اوامر المزادات",
                 style: TextStyleClass.headBoldStyle(color: Colors.white),
+              ),
+               SizedBox(
+                width: 10.w,
               ),
             ],
           ),  

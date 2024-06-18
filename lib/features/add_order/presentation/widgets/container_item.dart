@@ -74,27 +74,6 @@ class ContainerItem extends StatelessWidget {
               )
             ],
           ),
-          // Container(
-          //   height: 6.h,
-          //   child: Row(
-          //     mainAxisAlignment: MainAxisAlignment.center,
-          //     children: [
-          //      Column(
-                
-          //       mainAxisAlignment: MainAxisAlignment.end,
-          //       children: [ Text("\$12.00",
-          //           style: TextStyleClass.semiStyle(color: Color(0xff581D8A))),
-          //           Row(
-          //             children: [
-          //               Text("Points 200",
-          //               style: TextStyleClass.semiStyle(color: Color(0xff581D8A))),
-          //             Image.asset("${Images.point}")
-          //             ],
-          //           ),],),
-
-          //     ],
-          //   ),
-          // ),
           SizedBox(
             width: 6.w,
           ),

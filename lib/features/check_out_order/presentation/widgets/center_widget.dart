@@ -66,6 +66,7 @@ class CenterWidget extends StatelessWidget {
           TextFieldWidget(
             controller: TextEditingController(),
             hintText: "Add Comment",
+            textAlign:TextAlign.center,
             suffix: Icon(Icons.keyboard_arrow_down_sharp,size: 9.w,),maxLines: 2,
           )
         ],

@@ -6,7 +6,7 @@ import 'package:untitled/config/text_style.dart';
 class CarouselSliderWidget extends StatelessWidget {
   Function changeindex;
   int listlength;
-  NetworkImage image;
+  ImageProvider image;
   String text;
   int smootherLength;
   int indexSmoother;
@@ -32,7 +32,7 @@ class CarouselSliderWidget extends StatelessWidget {
             width: 100.w,
             child: CarouselSlider(
               options: CarouselOptions(
-                  height: 23.h,
+                  height: 20.h,
                   autoPlayInterval: const Duration(seconds: 10),
                   viewportFraction: 1,
                   enableInfiniteScroll: true,
@@ -56,7 +56,7 @@ class CarouselSliderWidget extends StatelessWidget {
                           children: [
                             Container(
                               width: 100.w,
-                              height: 22.h,
+                              height: 19.h,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 image: DecorationImage(
@@ -70,7 +70,7 @@ class CarouselSliderWidget extends StatelessWidget {
                                   padding: EdgeInsets.only(bottom: 2.h),
                                   child: Text(
                                    text ??
-                                        "khaled",
+                                        " ",
                                     style: TextStyleClass.semiHeadBoldStyle(
                                         color: Colors.white),
                                   ),
@@ -86,29 +86,31 @@ class CarouselSliderWidget extends StatelessWidget {
               }),
             ),
           ),
-          SizedBox(height: 1.h),
-          Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: List.generate(
-                 smootherLength ?? 2,
-                  (i) => Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 1.w),
-                      child: i == indexSmoother
-                          ? Container(
-                              height: 3.w,
-                              width: 3.w,
-                              decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.green),
-                                  color: Colors.green,
-                                  borderRadius: BorderRadius.circular(2.w)))
-                          : Container(
-                              height: 3.w,
-                              width: 3.w,
-                              decoration: BoxDecoration(
-                                  color: Colors.grey.shade200,
-                                  border: Border.all(
-                                      color: Colors.grey.shade200, width: 2.0),
-                                  borderRadius: BorderRadius.circular(2.w)))))),
+          // SizedBox(height: 1.h),
+          // Row(
+          //     mainAxisAlignment: MainAxisAlignment.center,
+          //     children: List.generate(
+          //        smootherLength ?? 2,
+          //         (i) => Padding(
+          //             padding: EdgeInsets.symmetric(horizontal: 1.w),
+          //             child: i == indexSmoother
+          //                 ? Container(
+          //                     height: 3.w,
+          //                     width: 3.w,
+          //                     decoration: BoxDecoration(
+          //                         border: Border.all(color: Colors.green),
+          //                         color: Colors.green,
+          //                         borderRadius: BorderRadius.circular(2.w)))
+          //                 : Container(
+          //                     height: 3.w,
+          //                     width: 3.w,
+          //                     decoration: BoxDecoration(
+          //                         color: Colors.grey.shade200,
+          //                         border: Border.all(
+          //                             color: Colors.grey.shade200, width: 2.0),
+          //                         borderRadius: BorderRadius.circular(2.w)))))
+                                  
+          //                         ),
         ],
       ),
     );

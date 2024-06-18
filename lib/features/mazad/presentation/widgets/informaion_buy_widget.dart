@@ -19,7 +19,7 @@ class InformationBuyWidget extends StatelessWidget {
           svg: Images.backawro,
         ),
         title: Text(
-          "اعدادات المزادات",
+          "معلومات الدفع",
           style: TextStyleClass.headBoldStyle(),
         ),
       ),

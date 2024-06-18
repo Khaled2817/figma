@@ -23,7 +23,7 @@ final int index;
                             },
                             child: Text(
                               "${myprovider.settingsModellist[index].text}",
-                              style: TextStyleClass.normalBoldStyle(color: Color.fromARGB(255, 149, 148, 148)),
+                              style: TextStyleClass.normalBoldStyle(color: Color(0xff615D5C).withOpacity(0.6)),
                             ),
                           ),
                           Spacer(),
