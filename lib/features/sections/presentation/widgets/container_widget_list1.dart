@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 import 'package:untitled/config/text_style.dart';
-import 'package:untitled/core/constants/images.dart';
-import 'package:untitled/core/widget/svg_widget.dart';
 import 'package:untitled/features/sections/presentation/provider/provider_sections.dart';
 
 class ContainerWidgetList1 extends StatelessWidget {

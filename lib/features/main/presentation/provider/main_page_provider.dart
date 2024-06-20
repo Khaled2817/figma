@@ -1,30 +1,34 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:untitled/config/app_color.dart';
-import 'package:untitled/core/constants/constants.dart';
 import 'package:untitled/core/constants/images.dart';
 import 'package:untitled/core/helper_function/location.dart';
 import 'package:untitled/core/helper_function/navigation.dart';
 import 'package:untitled/features/account/presentation/pages/account.dart';
+import 'package:untitled/features/car_home/presentation/pages/home_page.dart';
 import 'package:untitled/features/chats/presentation/pages/chats.dart';
 import 'package:untitled/features/home/presentation/pages/hompage.dart';
 import 'package:untitled/features/main/presentation/pages/main_page.dart';
+import 'package:untitled/features/order_oil/presentation/pages/orders_oil_page.dart';
 import 'package:untitled/features/orders/presentation/pages/orders.dart';
+import 'package:untitled/features/personal_settings_oil_app/presentation/pages/personal_settings_page.dart';
+import 'package:untitled/features/sections/presentation/pages/section_page.dart';
+import 'package:untitled/features/wallet_oil/presentation/pages/wallet_page_oil.dart';
 
 import '../../../../../core/models/model_bottom.dart';
 
 class MainProvider extends ChangeNotifier {
   final List<Widget> bottomWidget = [
-   HomePageApp(),
-   ChatsPage(),
-   OrdersPage(),
-   AccountPage()
+   HomePageCar(),
+  OrdersOilPage(),
+   SectionPage(),
+    WalletPageOil(),
+   PersonalSettingsPage()
   ];
   final List<BottomModel> items = [
-    BottomModel(label: 'home', svg: Images.homee),
-    BottomModel(label: 'messages', svg: Images.chat),
-    BottomModel(label: 'myorders', svg: Images.order),
-    BottomModel(label: 'my_account', svg: Images.accountt),
+    BottomModel(label: '', svg: Images.navhome),
+    BottomModel(label: '', svg: Images.nav6),
+    BottomModel(label: '', svg: Images.nav3),
+    BottomModel(label: '', svg: Images.nav2),
+    BottomModel(label: '', svg: Images.nav1),
   ];
 
   int index = 0;

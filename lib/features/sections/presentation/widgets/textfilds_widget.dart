@@ -43,7 +43,7 @@ class TextfildWidgetModel extends StatelessWidget {
             controller: TextEditingController(),
             titleWidget: Row(children: <Widget>[SizedBox(width: 3.w,),Text("موديل السنه",style:TextStyleClass.semiStyle() ,)],),
             hintText: '2024',
-            prefix: Image.asset("${Images.donelist}"),
+            prefix: Container(width: 2.w,height: 2.h,child: Image.asset("${Images.donelist}")),
             suffix:Icon(Icons.keyboard_arrow_down_rounded,size:6.w,color: Color(0xff9EA2A5),),
           ),
         )],)

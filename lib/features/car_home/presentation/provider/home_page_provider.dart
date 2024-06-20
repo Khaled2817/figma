@@ -3,8 +3,8 @@ import 'package:untitled/core/helper_function/navigation.dart';
 import 'package:untitled/features/sections/presentation/pages/section_page.dart';
 
 class HomePageProvider extends ChangeNotifier{
-  void goTo(){
+  void goTo(Widget widget){
 
-    navP(SectionPage());
+    navP(widget);
   }
 }

@@ -19,9 +19,12 @@ import 'package:untitled/features/car_home/presentation/pages/home_page.dart';
 import 'package:untitled/features/car_home/presentation/provider/home_page_provider.dart';
 import 'package:untitled/features/categories/presentation/provider/categories_provider.dart';
 import 'package:untitled/features/check_out_order/presentation/provider/Provider.dart';
+import 'package:untitled/features/conection_us/presentation/pages/conection_us_page.dart';
+import 'package:untitled/features/conection_us/presentation/provider/conection_us_provider.dart';
 import 'package:untitled/features/home/presentation/provider/homeprovider.dart';
 import 'package:untitled/features/language/domain/entities/app_localizations.dart';
 import 'package:untitled/features/language/presentation/provider/language_provider.dart';
+import 'package:untitled/features/main/presentation/pages/main_page.dart';
 
 import 'package:untitled/features/main/presentation/provider/main_page_provider.dart';
 import 'package:untitled/features/market/presentation/provider/provider.dart';
@@ -29,10 +32,13 @@ import 'package:untitled/features/market/presentation/provider/provider.dart';
 import 'package:untitled/features/mazad/presentation/provider/mazad_provider.dart';
 
 import 'package:untitled/features/menu_information_comment/presentation/provider/menu_provider.dart';
+import 'package:untitled/features/order_oil/presentation/provider/orders_provider_oil.dart';
+import 'package:untitled/features/order_oil_details/presentation/provider/order_oil_details_provider.dart';
 
 import 'package:untitled/features/order_stat/presentation/provider/orderstatus_provider.dart';
 import 'package:untitled/features/orders/presentation/provider/order_provider.dart';
 import 'package:untitled/features/paymentcarapp/presentation/provider/payment_provider.dart';
+import 'package:untitled/features/personal_settings_oil_app/presentation/provider/personal_provider_oil.dart';
 import 'package:untitled/features/productsectioncar/presentation/provider/product_section_provider.dart';
 import 'package:untitled/features/sections/presentation/provider/provider_sections.dart';
 
@@ -127,6 +133,10 @@ class MyApp extends StatelessWidget {
             ChangeNotifierProvider.value(value: ProductSectionProvider()),
             ChangeNotifierProvider.value(value: PaymentProvideroil()),
             ChangeNotifierProvider.value(value: PaymentProvider()),
+            ChangeNotifierProvider.value(value: OrdersProviderOil()),
+            ChangeNotifierProvider.value(value: OrderOilDetailsProvider()),
+            ChangeNotifierProvider.value(value: PersonalProviderOil()),
+            ChangeNotifierProvider.value(value: ConectionUsProvider()),
           ],
           child: ChangeNotifierProvider<LanguageProvider>(
               create: (_) => language,
@@ -171,7 +181,8 @@ class MyApp extends StatelessWidget {
                               GlobalCupertinoLocalizations.delegate
                             ],
                             theme: defaultTheme,
-                            home: HomePageCar())
+                            home: MainPage()
+                          )
                     
                     );
               })));},

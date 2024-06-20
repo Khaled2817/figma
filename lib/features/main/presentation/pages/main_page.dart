@@ -45,6 +45,7 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
         });
       },
       child: Scaffold(
+        //floatingActionButtonLocation:FloatingActionButtonLocation.centerFloat,
         bottomNavigationBar: const ButtomNavigatorBarWidget(),
         body: model.bottomWidget[model.index],
       ),
